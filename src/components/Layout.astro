@@ -1,0 +1,87 @@
+---
+const {
+  title = 'Deb | AI Product Manager',
+  description = 'AI Product Manager writing about building intelligent products, strategy, and the future of work.',
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="nav-inner">
+        <!-- Left: Name / Logo -->
+        <a href="#home" class="nav-brand">Deb</a>
+
+        <!-- Center + Right: nav links, theme toggle, CTA -->
+        <nav class="top-nav" aria-label="Primary navigation">
+          <a href="#writing">Writing</a>
+          <a href="#ai-in-action">AI in Action</a>
+          <a href="#speaking">Speaking</a>
+          <a href="#about">About</a>
+
+          <button
+            id="theme-toggle"
+            class="icon-btn"
+            aria-label="Toggle color theme"
+            title="Toggle light / dark"
+          >
+            <span class="icon-sun" aria-hidden="true">☀️</span>
+            <span class="icon-moon" aria-hidden="true">🌙</span>
+          </button>
+
+          <a
+            class="cta-btn"
+            href="https://linkedin.com/in/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn →</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="page-shell">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <p>Writing about AI, product, and building things that matter.</p>
+      <div class="footer-links">
+        <a href="mailto:hello@example.com">hello@example.com</a>
+        <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+      </div>
+      <p class="footer-copy">© 2026 Deb. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Theme toggle — persist preference across page loads
+      const html = document.documentElement;
+      const btn = document.getElementById('theme-toggle');
+
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initial = saved ?? (prefersDark ? 'dark' : 'light');
+      html.setAttribute('data-theme', initial);
+
+      btn?.addEventListener('click', () => {
+        const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+    </script>
+  </body>
+</html>

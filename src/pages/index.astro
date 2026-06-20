@@ -1,0 +1,165 @@
+---
+import '../styles/global.css';
+import Layout from '../components/Layout.astro';
+
+const writing = [
+  {
+    tag: 'AI Strategy',
+    title: 'Why most AI product roadmaps fail before they start',
+    excerpt: 'The gap between AI demos and shipped products comes down to one thing: misaligned success metrics at discovery.',
+    href: '#writing',
+  },
+  {
+    tag: 'Product Leadership',
+    title: 'How to run a discovery sprint that actually informs the roadmap',
+    excerpt: 'A repeatable 5-day framework for turning customer interviews into prioritized bets — without the guesswork.',
+    href: '#writing',
+  },
+  {
+    tag: 'Go-to-Market',
+    title: "Positioning AI features for buyers who don't trust AI yet",
+    excerpt: "Enterprise buyers are skeptical. Here's how I reframe capability into outcomes they already care about.",
+    href: '#writing',
+  },
+  {
+    tag: 'Metrics',
+    title: 'The three KPIs every AI product team should own',
+    excerpt: "Adoption, confidence, and time-to-value. Why these beat accuracy scores in every exec review I've been in.",
+    href: '#writing',
+  },
+];
+
+const demos = [
+  {
+    icon: '🤖',
+    title: 'AI Triage Assistant',
+    description: 'A prototype that classifies inbound support tickets using Claude and routes them to the right team — cutting manual triage by 60%.',
+    link: '#ai-in-action',
+    label: 'View demo',
+  },
+  {
+    icon: '📊',
+    title: 'Roadmap Prioritization GPT',
+    description: 'Custom GPT that ingests feature requests and scores them against a weighted impact/effort matrix. Used in 3 product reviews.',
+    link: '#ai-in-action',
+    label: 'See how it works',
+  },
+  {
+    icon: '✍️',
+    title: 'PRD Co-pilot',
+    description: 'A prompt chain that turns rough discovery notes into a structured Product Requirements Document with acceptance criteria.',
+    link: '#ai-in-action',
+    label: 'Try the template',
+  },
+];
+
+const speaking = [
+  {
+    event: 'ProductCon 2025',
+    date: 'Oct 2025',
+    title: 'From Experiment to Product: Shipping AI Features at Scale',
+    venue: 'ProductCon Global · Virtual',
+    href: '#speaking',
+  },
+  {
+    event: 'AI Summit',
+    date: 'Jun 2025',
+    title: 'Building Trust in AI-Powered Workflows',
+    venue: 'AI Summit NYC · Panel',
+    href: '#speaking',
+  },
+  {
+    event: 'SaaStr',
+    date: 'Feb 2025',
+    title: 'Metrics That Matter: Measuring AI Product Value',
+    venue: 'SaaStr Annual · Workshop',
+    href: '#speaking',
+  },
+];
+---
+
+<Layout
+  title="Deb | AI Product Manager"
+  description="AI Product Manager writing about intelligent products, strategy, and the future of work."
+>
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section id="home" class="hero-section">
+    <p class="hero-eyebrow">✦ AI Product Manager</p>
+    <h1>Building intelligent products that people actually use.</h1>
+    <p class="hero-description">
+      I partner with engineering and design to turn AI research into shipped features —
+      then make sure those features drive measurable business outcomes.
+      Currently focused on enterprise AI workflows, product discovery, and go-to-market strategy.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn →</a>
+      <a class="btn btn-ghost" href="#writing">Read my writing</a>
+    </div>
+  </section>
+
+  <!-- ── Writing ───────────────────────────────────────────── -->
+  <section id="writing" class="section-block">
+    <p class="section-label">Essays</p>
+    <h2>Latest writing</h2>
+    <div class="writing-grid">
+      {writing.map((post) => (
+        <a class="article-card" href={post.href}>
+          <div class="article-card-body">
+            <span class="article-tag">{post.tag}</span>
+            <h3>{post.title}</h3>
+            <p>{post.excerpt}</p>
+          </div>
+          <span class="article-card-arrow" aria-hidden="true">↗</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ── AI in Action ──────────────────────────────────────── -->
+  <section id="ai-in-action" class="section-block">
+    <p class="section-label">AI in Action</p>
+    <h2>Prototypes &amp; experiments</h2>
+    <div class="demo-grid">
+      {demos.map((demo) => (
+        <div class="demo-card">
+          <div class="demo-icon" aria-hidden="true">{demo.icon}</div>
+          <h3>{demo.title}</h3>
+          <p>{demo.description}</p>
+          <a class="demo-link" href={demo.link}>{demo.label} →</a>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ── Speaking ──────────────────────────────────────────── -->
+  <section id="speaking" class="section-block">
+    <p class="section-label">Speaking</p>
+    <h2>Talks &amp; panels</h2>
+    <div class="speaking-list">
+      {speaking.map((talk) => (
+        <a class="speaking-card" href={talk.href}>
+          <div class="speaking-badge">{talk.date}</div>
+          <div class="speaking-card-body">
+            <h3>{talk.title}</h3>
+            <p>{talk.event} · {talk.venue}</p>
+          </div>
+          <span aria-hidden="true" style="color: var(--text-muted); font-size:1rem;">→</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ── Connect ───────────────────────────────────────────── -->
+  <section id="about" class="connect-section">
+    <p class="section-label" style="margin-bottom:12px;">Let's connect</p>
+    <h2>Open to advisory, consulting &amp; collaboration.</h2>
+    <p>
+      If you're building an AI product and need a thought partner on strategy, roadmap,
+      or go-to-market — I'd love to talk.
+    </p>
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+      <a class="btn btn-primary" href="mailto:hello@example.com">Email me →</a>
+      <a class="btn btn-ghost" href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </section>
+</Layout>
