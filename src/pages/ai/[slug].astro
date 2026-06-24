@@ -1,0 +1,68 @@
+---
+import Layout from '../../components/Layout.astro';
+import '../../styles/global.css';
+import { aiInAction } from '../../data/ai-in-action.js';
+
+export function getStaticPaths() {
+  return aiInAction.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+---
+
+<Layout
+  title={`${item.title} | Deb`}
+  description={item.solution}
+>
+  <article class="case-study-page">
+
+    <p class="case-study-page-back">
+      <a href="/#ai-in-action">← AI in action</a>
+    </p>
+
+    <header class="case-study-page-header">
+      <p class="case-study-page-domain">{item.domain}</p>
+      <h1 class="case-study-page-title">{item.title}</h1>
+    </header>
+
+    <section class="case-study-page-body">
+
+      <div class="case-study-page-block">
+        <h2>Problem</h2>
+        <p>{item.problem}</p>
+      </div>
+
+      <div class="case-study-page-block">
+        <h2>Solution</h2>
+        <p>{item.solution}</p>
+      </div>
+
+      <div class="case-study-page-block">
+        <h2>Impact</h2>
+        <ul>
+          {item.impact.map((point) => <li>{point}</li>)}
+        </ul>
+      </div>
+
+      <div class="case-study-page-block">
+        <h2>My role</h2>
+        <p>{item.responsibilities.join(' · ')}</p>
+      </div>
+
+      {item.technologies && (
+        <div class="case-study-page-block">
+          <h2>Technologies</h2>
+          <div class="case-study-tags">
+            {item.technologies.map((tag) => (
+              <span class="case-study-tag">{tag}</span>
+            ))}
+          </div>
+        </div>
+      )}
+
+    </section>
+  </article>
+</Layout>

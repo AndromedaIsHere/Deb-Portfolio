@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Layout from '../components/Layout.astro';
+import { aiInAction } from '../data/ai-in-action.js';
 
 const essays = [
   {
@@ -20,58 +21,6 @@ const essays = [
     title: "Positioning AI features for buyers who don't trust AI yet",
     category: 'Go-to-Market',
     href: '#writing',
-  },
-];
-
-const aiInAction = [
-  {
-    title: "Maintenance Copilot",
-    domain: "Enterprise Asset Management",
-    problem: "Technicians spent excessive time troubleshooting maintenance issues and searching documentation.",
-    solution: "LLM-powered conversational assistant integrated into maintenance workflows.",
-    responsibilities: ["Product strategy", "Customer discovery", "Use case prioritization", "AI evaluation", "Monetization"],
-    impact: ["Up to 67% reduction in troubleshooting time", "Improved first-time fix rates", "Reduced downtime"],
-    technologies: ["GenAI", "RAG", "Prompt Engineering", "Evaluation Frameworks"],
-  },
-  {
-    title: "Smart Scheduling",
-    domain: "Enterprise Asset Management",
-    problem: "Maintenance scheduling was manual and inefficient.",
-    solution: "AI-assisted scheduling recommendations.",
-    responsibilities: ["Product strategy", "Roadmap", "Discovery", "Cross-functional leadership"],
-    impact: ["Improved planning efficiency and technician utilization"],
-  },
-  {
-    title: "Duplicate Detection",
-    domain: "Enterprise Asset Management",
-    problem: "Duplicate assets and work records reduced data quality.",
-    solution: "ML-powered duplicate detection capability.",
-    responsibilities: ["Product strategy", "Discovery", "Cross-functional leadership"],
-    impact: ["Improved asset data quality", "Improved user productivity"],
-  },
-  {
-    title: "Dynamic Targeting",
-    domain: "Life Sciences",
-    problem: "Commercial teams struggled with identifying high-value healthcare providers.",
-    solution: "Commercial decision intelligence platform using AI-driven targeting.",
-    responsibilities: ["Product strategy", "Customer discovery", "AI prioritization", "Cross-functional leadership"],
-    impact: ["10+ global pharma organizations", "3–5% sales uplift"],
-  },
-  {
-    title: "Next Best Action",
-    domain: "Life Sciences",
-    problem: "Commercial engagement lacked personalization.",
-    solution: "Recommendation engine for omnichannel engagement.",
-    responsibilities: ["Product strategy", "Discovery", "Cross-functional leadership"],
-    impact: ["30+ customers globally"],
-  },
-  {
-    title: "Kapture",
-    domain: "Banking · Insurance · Mortgage",
-    problem: "Manual document processing was slow and error-prone.",
-    solution: "Intelligent Document Processing platform.",
-    responsibilities: ["Product strategy", "Discovery", "Go-to-market"],
-    impact: ["50+ enterprise customers within 2 months", "80% reduction in processing time", "Accuracy improved from 95% to 99.5%"],
   },
 ];
 
@@ -163,40 +112,15 @@ const speaking = [
     <section id="ai-in-action">
       <h2 class="section-title">AI in action</h2>
       <p class="section-desc">Six AI products built across enterprise SaaS, life sciences, and fintech.</p>
-      <ul class="case-study-list">
+      <ul class="notes-list">
         {aiInAction.map((item) => (
-          <li class="case-study-item">
-            <div class="case-study-header">
-              <h3 class="case-study-title">{item.title}</h3>
+          <li class="notes-list-item">
+            <a href={`/ai/${item.slug}`}>
+              <h3>{item.title}</h3>
+            </a>
+            <span class="notes-list-meta">
               <span class="notes-list-category">{item.domain}</span>
-            </div>
-            <div class="case-study-row">
-              <span class="case-study-label">Problem</span>
-              <span class="case-study-text">{item.problem}</span>
-            </div>
-            <div class="case-study-row">
-              <span class="case-study-label">Solution</span>
-              <span class="case-study-text">{item.solution}</span>
-            </div>
-            <div class="case-study-row case-study-row--impact">
-              <span class="case-study-label">Impact</span>
-              <ul class="case-study-impact">
-                {item.impact.map((point) => (
-                  <li>{point}</li>
-                ))}
-              </ul>
-            </div>
-            <div class="case-study-row">
-              <span class="case-study-label">Role</span>
-              <span class="case-study-text case-study-text--muted">{item.responsibilities.join(' · ')}</span>
-            </div>
-            {item.technologies && (
-              <div class="case-study-tags">
-                {item.technologies.map((tag) => (
-                  <span class="case-study-tag">{tag}</span>
-                ))}
-              </div>
-            )}
+            </span>
           </li>
         ))}
       </ul>
