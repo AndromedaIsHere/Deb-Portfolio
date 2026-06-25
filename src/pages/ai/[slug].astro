@@ -26,32 +26,119 @@ const { item } = Astro.props;
     <header class="case-study-page-header">
       <p class="case-study-page-domain">{item.domain}</p>
       <h1 class="case-study-page-title">{item.title}</h1>
+      <p class="case-study-page-solution">{item.solution}</p>
     </header>
 
     <section class="case-study-page-body">
 
+      <!-- ── The Problem ──────────────────────────── -->
       <div class="case-study-page-block">
-        <h2>Problem</h2>
-        <p>{item.problem}</p>
+        <h2>The problem</h2>
+        {item.problemDetail
+          ? item.problemDetail.split('\n\n').map((para) => <p>{para.trim()}</p>)
+          : <p>{item.problem}</p>
+        }
+        <!-- 💡 IMAGE SUGGESTION: A screenshot or sketch of the "before" state —
+             e.g. a technician on their phone, a messy PDF manual, or a long
+             support queue. Dimensions: ~700×420px. Place as:
+             <img src="/images/maintenance-copilot-before.jpg" alt="…" class="case-study-image" />
+        -->
       </div>
 
-      <div class="case-study-page-block">
-        <h2>Solution</h2>
-        <p>{item.solution}</p>
-      </div>
+      <!-- ── Why It Mattered ─────────────────────── -->
+      {item.whyItMattered && (
+        <div class="case-study-page-block">
+          <h2>Why this opportunity mattered</h2>
+          <div class="cs-stat-row">
+            {item.whyItMattered.map((s) => (
+              <div class="cs-stat-card">
+                <span class="cs-stat-number">{s.stat}</span>
+                <span class="cs-stat-label">{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
-      <div class="case-study-page-block">
-        <h2>Impact</h2>
-        <ul>
-          {item.impact.map((point) => <li>{point}</li>)}
-        </ul>
-      </div>
-
+      <!-- ── My Role ─────────────────────────────── -->
       <div class="case-study-page-block">
         <h2>My role</h2>
-        <p>{item.responsibilities.join(' · ')}</p>
+        <div class="case-study-tags">
+          {item.responsibilities.map((tag) => (
+            <span class="case-study-tag">{tag}</span>
+          ))}
+        </div>
       </div>
 
+      <!-- ── Key Decisions ──────────────────────── -->
+      {item.keyDecisions && (
+        <div class="case-study-page-block">
+          <h2>Key decisions</h2>
+          <div class="cs-decisions">
+            {item.keyDecisions.map((d) => (
+              <div class="cs-decision">
+                <p class="cs-decision-title">{d.decision}</p>
+                {d.rationale.split('\n').map((line) => line.trim()).filter(Boolean).map((line) => (
+                  <p class="cs-decision-body">{line}</p>
+                ))}
+              </div>
+            ))}
+          </div>
+          <!-- 💡 IMAGE SUGGESTION: A simple architecture diagram of the RAG pipeline
+               (data sources → vector store → LLM → Copilot UI). Even a hand-drawn
+               and scanned sketch works well here. Dimensions: ~700×380px.
+               <img src="/images/maintenance-copilot-architecture.png" alt="RAG architecture diagram" class="case-study-image" />
+          -->
+        </div>
+      )}
+
+      <!-- ── Outcome ────────────────────────────── -->
+      <div class="case-study-page-block">
+        <h2>Outcome</h2>
+        {item.impactStats
+          ? (
+            <div class="cs-stat-row cs-stat-row--outcome">
+              {item.impactStats.map((s) => (
+                <div class={`cs-stat-card${s.emphasis ? ' cs-stat-card--hero' : ''}`}>
+                  <span class="cs-stat-number">{s.stat}</span>
+                  <span class="cs-stat-label">{s.label}</span>
+                </div>
+              ))}
+            </div>
+          )
+          : (
+            <ul>
+              {item.impact.map((point) => <li>{point}</li>)}
+            </ul>
+          )
+        }
+        <!-- 💡 IMAGE SUGGESTION: A before/after chart showing troubleshooting time,
+             or a screenshot of the Copilot UI in context. Dimensions: ~700×420px.
+             <img src="/images/maintenance-copilot-results.png" alt="Troubleshooting time reduced 67%" class="case-study-image" />
+        -->
+      </div>
+
+      <!-- ── What I Learned ─────────────────────── -->
+      {item.learned && (
+        <div class="case-study-page-block cs-learned-block">
+          <h2>What I learned</h2>
+          <p class="cs-learned-intro">
+            This is the section I care most about. Results validate the bet; learnings compound it.
+          </p>
+          <ol class="cs-learned-list">
+            {item.learned.map((l) => (
+              <li class="cs-learned-item">
+                <p class="cs-learned-heading">{l.heading}</p>
+                {l.body.split('\n').map((line) => line.trim()).filter(Boolean).map((line) => (
+                  <p class="cs-learned-body">{line}</p>
+                ))}
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
+
+      <!-- ── Technologies ───────────────────────── -->
       {item.technologies && (
         <div class="case-study-page-block">
           <h2>Technologies</h2>

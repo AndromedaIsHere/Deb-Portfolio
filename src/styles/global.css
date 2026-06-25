@@ -628,6 +628,164 @@ a:hover { text-decoration: underline; }
   text-transform: uppercase;
 }
 
+/* ── Case study: solution subtitle ── */
+.case-study-page-solution {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin: .25rem 0 0;
+  font-style: italic;
+}
+
+/* ── Case study: inline image ── */
+.case-study-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin: 1.25rem 0;
+  border: 1px solid var(--color-border);
+}
+
+/* ── Stat cards (Why It Mattered / Outcome) ── */
+.cs-stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: .75rem;
+  margin-top: .75rem;
+}
+
+.cs-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  padding: .9rem 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.cs-stat-card--hero {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.cs-stat-number {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.cs-stat-card--hero .cs-stat-number {
+  font-size: 2rem;
+}
+
+.cs-stat-label {
+  font-size: .78rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* ── Key decisions ── */
+.cs-decisions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-top: .5rem;
+}
+
+.cs-decision {
+  padding: 1rem 1.1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius);
+}
+
+.cs-decision-title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: .85rem;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 0 0 .5rem;
+}
+
+.cs-decision-body {
+  font-size: .93rem;
+  color: var(--color-text);
+  margin: 0 0 .4rem;
+  line-height: 1.6;
+}
+.cs-decision-body:last-child { margin-bottom: 0; }
+
+/* ── What I Learned ── */
+.cs-learned-block {
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.cs-learned-intro {
+  font-size: .9rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: -.25rem 0 1.25rem;
+}
+
+.cs-learned-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: learned;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.cs-learned-item {
+  counter-increment: learned;
+  padding-left: 2.25rem;
+  position: relative;
+}
+
+.cs-learned-item::before {
+  content: counter(learned);
+  position: absolute;
+  left: 0;
+  top: .15rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--color-accent);
+  color: var(--color-surface);
+  border-radius: 50%;
+  font-size: .72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  line-height: 1;
+}
+
+.cs-learned-heading {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: .95rem;
+  margin: 0 0 .4rem;
+  color: var(--color-text);
+}
+
+.cs-learned-body {
+  font-size: .93rem;
+  color: var(--color-text);
+  margin: 0 0 .4rem;
+  line-height: 1.65;
+}
+.cs-learned-body:last-child { margin-bottom: 0; }
+
 /* ── Footer ── */
 .site-footer {
   border-top: 1px solid var(--color-border);
