@@ -1,6 +1,6 @@
 # Deb Portfolio
 
-A lightweight Astro portfolio website inspired by `https://sharmadushyant.com`.
+A lightweight Astro portfolio website.
 
 ## Setup
 
