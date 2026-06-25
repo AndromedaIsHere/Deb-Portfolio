@@ -11,145 +11,225 @@ export function getStaticPaths() {
 }
 
 const { item } = Astro.props;
+
+// Build the TOC from whichever sections exist for this item
+const tocItems = [
+  { id: 'business-context',        label: 'Business context',       show: !!item.businessContext },
+  { id: 'the-problem',             label: 'The problem',             show: true },
+  { id: 'user-segmentation',       label: 'User segmentation',       show: !!item.userSegmentation },
+  { id: 'problem-prioritisation',  label: 'Problem prioritisation',  show: !!item.problemPrioritisation },
+  { id: 'why-ai',                  label: 'Why AI?',                 show: !!item.whyAI },
+  { id: 'key-decisions',           label: 'Key decisions',           show: !!item.keyDecisions },
+  { id: 'technical-architecture',  label: 'Technical architecture',  show: !!item.architecture },
+  { id: 'risks',                   label: 'Risks & mitigations',     show: !!item.risks },
+  { id: 'outcome',                 label: 'Outcome',                 show: true },
+  { id: 'metrics',                 label: 'How I\'d measure success', show: !!item.metrics },
+  { id: 'what-i-learned',          label: 'What I learned',          show: !!item.learned },
+  { id: 'my-role',                 label: 'My role',                 show: true },
+  { id: 'technologies',            label: 'Technologies',            show: !!item.technologies },
+].filter((t) => t.show);
 ---
 
 <Layout
   title={`${item.title} | Deb`}
   description={item.solution}
 >
-  <article class="case-study-page">
+  <div class="cs-layout">
 
-    <p class="case-study-page-back">
-      <a href="/#ai-in-action">← AI in action</a>
-    </p>
-
-    <header class="case-study-page-header">
-      <p class="case-study-page-domain">{item.domain}</p>
-      <h1 class="case-study-page-title">{item.title}</h1>
-      <p class="case-study-page-solution">{item.solution}</p>
-    </header>
-
-    <section class="case-study-page-body">
-
-      <!-- ── The Problem ──────────────────────────── -->
-      <div class="case-study-page-block">
-        <h2>The problem</h2>
-        {item.problemDetail
-          ? item.problemDetail.split('\n\n').map((para) => <p>{para.trim()}</p>)
-          : <p>{item.problem}</p>
-        }
-        <!-- 💡 IMAGE SUGGESTION: A screenshot or sketch of the "before" state —
-             e.g. a technician on their phone, a messy PDF manual, or a long
-             support queue. Dimensions: ~700×420px. Place as:
-             <img src="/images/maintenance-copilot-before.jpg" alt="…" class="case-study-image" />
-        -->
-      </div>
-
-      <!-- ── Why It Mattered ─────────────────────── -->
-      {item.whyItMattered && (
-        <div class="case-study-page-block">
-          <h2>Why this opportunity mattered</h2>
-          <div class="cs-stat-row">
-            {item.whyItMattered.map((s) => (
-              <div class="cs-stat-card">
-                <span class="cs-stat-number">{s.stat}</span>
-                <span class="cs-stat-label">{s.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      <!-- ── My Role ─────────────────────────────── -->
-      <div class="case-study-page-block">
-        <h2>My role</h2>
-        <div class="case-study-tags">
-          {item.responsibilities.map((tag) => (
-            <span class="case-study-tag">{tag}</span>
+    <!-- ── Left nav (sticky TOC) ── -->
+    <aside class="cs-toc" aria-label="Page contents">
+      <p class="cs-toc-back"><a href="/#ai-in-action">← AI in action</a></p>
+      <p class="cs-toc-title">{item.title}</p>
+      <nav>
+        <ul class="cs-toc-list">
+          {tocItems.map((t) => (
+            <li><a href={`#${t.id}`} class="cs-toc-link">{t.label}</a></li>
           ))}
-        </div>
-      </div>
+        </ul>
+      </nav>
+    </aside>
 
-      <!-- ── Key Decisions ──────────────────────── -->
-      {item.keyDecisions && (
-        <div class="case-study-page-block">
-          <h2>Key decisions</h2>
-          <div class="cs-decisions">
+    <!-- ── Main content ── -->
+    <article class="case-study-page">
+
+      <!-- Header -->
+      <header class="case-study-page-header">
+        <p class="case-study-page-domain">{item.domain}</p>
+        <h1 class="case-study-page-title">{item.title}</h1>
+        <p class="case-study-page-solution">{item.solution}</p>
+      </header>
+
+      <!-- Body -->
+      <section class="case-study-page-body cs-editorial">
+
+        {item.businessContext && (
+          <div class="cs-section" id="business-context">
+            <h2>Business context</h2>
+            {item.businessContext.split('\n\n').map((para) => <p>{para.trim()}</p>)}
+          </div>
+        )}
+
+        <div class="cs-section" id="the-problem">
+          <h2>The problem</h2>
+          {item.problemDetail
+            ? item.problemDetail.split('\n\n').map((para) => <p>{para.trim()}</p>)
+            : <p>{item.problem}</p>
+          }
+        </div>
+
+        {item.userSegmentation && (
+          <div class="cs-section" id="user-segmentation">
+            <h2>User segmentation</h2>
+            {item.userSegmentation.split('\n\n').map((para) => <p>{para.trim()}</p>)}
+          </div>
+        )}
+
+        {item.problemPrioritisation && (
+          <div class="cs-section" id="problem-prioritisation">
+            <h2>Problem prioritisation</h2>
+            {item.problemPrioritisation.split('\n\n').map((para) => <p>{para.trim()}</p>)}
+          </div>
+        )}
+
+        {item.whyAI && (
+          <div class="cs-section" id="why-ai">
+            <h2>Why AI?</h2>
+            {item.whyAI.split('\n\n').map((para) => <p>{para.trim()}</p>)}
+          </div>
+        )}
+
+        {item.keyDecisions && (
+          <div class="cs-section" id="key-decisions">
+            <h2>Key decisions</h2>
             {item.keyDecisions.map((d) => (
               <div class="cs-decision">
-                <p class="cs-decision-title">{d.decision}</p>
-                {d.rationale.split('\n').map((line) => line.trim()).filter(Boolean).map((line) => (
-                  <p class="cs-decision-body">{line}</p>
-                ))}
+                <p><strong>{d.decision}</strong></p>
+                {d.rationale.split('\n\n').map((para) => <p>{para.trim()}</p>)}
               </div>
             ))}
           </div>
-          <!-- 💡 IMAGE SUGGESTION: A simple architecture diagram of the RAG pipeline
-               (data sources → vector store → LLM → Copilot UI). Even a hand-drawn
-               and scanned sketch works well here. Dimensions: ~700×380px.
-               <img src="/images/maintenance-copilot-architecture.png" alt="RAG architecture diagram" class="case-study-image" />
-          -->
-        </div>
-      )}
+        )}
 
-      <!-- ── Outcome ────────────────────────────── -->
-      <div class="case-study-page-block">
-        <h2>Outcome</h2>
-        {item.impactStats
-          ? (
-            <div class="cs-stat-row cs-stat-row--outcome">
-              {item.impactStats.map((s) => (
-                <div class={`cs-stat-card${s.emphasis ? ' cs-stat-card--hero' : ''}`}>
-                  <span class="cs-stat-number">{s.stat}</span>
-                  <span class="cs-stat-label">{s.label}</span>
-                </div>
-              ))}
-            </div>
-          )
-          : (
-            <ul>
-              {item.impact.map((point) => <li>{point}</li>)}
-            </ul>
-          )
-        }
-        <!-- 💡 IMAGE SUGGESTION: A before/after chart showing troubleshooting time,
-             or a screenshot of the Copilot UI in context. Dimensions: ~700×420px.
-             <img src="/images/maintenance-copilot-results.png" alt="Troubleshooting time reduced 67%" class="case-study-image" />
-        -->
-      </div>
-
-      <!-- ── What I Learned ─────────────────────── -->
-      {item.learned && (
-        <div class="case-study-page-block cs-learned-block">
-          <h2>What I learned</h2>
-          <p class="cs-learned-intro">
-            This is the section I care most about. Results validate the bet; learnings compound it.
-          </p>
-          <ol class="cs-learned-list">
-            {item.learned.map((l) => (
-              <li class="cs-learned-item">
-                <p class="cs-learned-heading">{l.heading}</p>
-                {l.body.split('\n').map((line) => line.trim()).filter(Boolean).map((line) => (
-                  <p class="cs-learned-body">{line}</p>
-                ))}
-              </li>
+        {item.architecture && (
+          <div class="cs-section" id="technical-architecture">
+            <h2>Technical architecture</h2>
+            <p>{item.architecture.overview}</p>
+            {item.architecture.layers && item.architecture.layers.map((l) => (
+              <div class="cs-arch-block">
+                <p class="cs-arch-layer">{l.layer}</p>
+                <p>{l.detail}</p>
+              </div>
             ))}
-          </ol>
-        </div>
-      )}
+            {item.architecture.frameworks && (
+              <div class="cs-arch-stack">
+                <p class="cs-arch-stack-label">Stack</p>
+                <ul class="cs-arch-framework-list">
+                  {item.architecture.frameworks.map((f) => (
+                    <li><strong>{f.name}</strong> — {f.detail}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
 
-      <!-- ── Technologies ───────────────────────── -->
-      {item.technologies && (
-        <div class="case-study-page-block">
-          <h2>Technologies</h2>
-          <div class="case-study-tags">
-            {item.technologies.map((tag) => (
-              <span class="case-study-tag">{tag}</span>
+        {item.risks && (
+          <div class="cs-section" id="risks">
+            <h2>Risks & mitigations</h2>
+            {item.risks.map((r) => (
+              <div class="cs-decision">
+                <p><strong>{r.risk}</strong></p>
+                <p>{r.mitigation}</p>
+              </div>
             ))}
           </div>
-        </div>
-      )}
+        )}
 
-    </section>
-  </article>
+        <div class="cs-section" id="outcome">
+          <h2>Outcome</h2>
+          <ul>
+            {item.impact.map((point) => <li>{point}</li>)}
+          </ul>
+        </div>
+
+        {item.metrics && (
+          <div class="cs-section" id="metrics">
+            <h2>How I'd measure success</h2>
+            <div class="cs-metrics">
+              <div class="cs-metrics-group">
+                <p class="cs-metrics-label">Business</p>
+                <ul>{item.metrics.business.map((m) => <li>{m}</li>)}</ul>
+              </div>
+              <div class="cs-metrics-group">
+                <p class="cs-metrics-label">Product</p>
+                <ul>{item.metrics.product.map((m) => <li>{m}</li>)}</ul>
+              </div>
+              <div class="cs-metrics-group">
+                <p class="cs-metrics-label">AI-specific</p>
+                <ul>{item.metrics.ai.map((m) => <li>{m}</li>)}</ul>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {item.learned && (
+          <div class="cs-section" id="what-i-learned">
+            <h2>What I learned</h2>
+            {item.learned.map((l) => (
+              <div class="cs-learned-item">
+                <p><strong>{l.heading}</strong></p>
+                {l.body.split('\n\n').map((para) => <p>{para.trim()}</p>)}
+              </div>
+            ))}
+          </div>
+        )}
+
+        <div class="cs-section" id="my-role">
+          <h2>My role</h2>
+          <p>{item.responsibilities.join(' · ')}</p>
+        </div>
+
+        {item.technologies && (
+          <div class="cs-section" id="technologies">
+            <h2>Technologies</h2>
+            <div class="case-study-tags">
+              {item.technologies.map((tag) => (
+                <span class="case-study-tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+        )}
+
+      </section>
+    </article>
+  </div>
+
+  <!-- Active TOC link highlight via IntersectionObserver -->
+  <script is:inline>
+    (function () {
+      var links = document.querySelectorAll('.cs-toc-link');
+      if (!links.length) return;
+
+      var map = {};
+      links.forEach(function (a) {
+        var id = a.getAttribute('href').slice(1);
+        map[id] = a;
+      });
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            Object.values(map).forEach(function (a) { a.classList.remove('cs-toc-link--active'); });
+            var a = map[entry.target.id];
+            if (a) a.classList.add('cs-toc-link--active');
+          }
+        });
+      }, { rootMargin: '-20% 0px -70% 0px' });
+
+      Object.keys(map).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) observer.observe(el);
+      });
+    })();
+  </script>
 </Layout>
