@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat /dev/null > \"/mnt/c/Users/z0052tba/Desktop/siemens_ppt_builder.py\" 2>/dev/null || true; echo \"cleared\")",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\z0052tba\\\\Desktop\\\\ai_roi_improvement_proposal_20260625.pptx\")"
+    ],
+    "additionalDirectories": [
+      "\\mnt\\c\\Users\\z0052tba\\Desktop"
+    ]
+  }
+}

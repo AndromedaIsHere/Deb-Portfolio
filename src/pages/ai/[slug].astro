@@ -14,11 +14,11 @@ const { item } = Astro.props;
 
 // Build the TOC from whichever sections exist for this item
 const tocItems = [
-  { id: 'business-context',        label: 'Business context',       show: !!item.businessContext },
-  { id: 'the-problem',             label: 'The problem',             show: true },
-  { id: 'user-segmentation',       label: 'User segmentation',       show: !!item.userSegmentation },
-  { id: 'problem-prioritisation',  label: 'Problem prioritisation',  show: !!item.problemPrioritisation },
-  { id: 'why-ai',                  label: 'Why AI?',                 show: !!item.whyAI },
+  { id: 'business-context',        label: 'The business problem I was actually solving',       show: !!item.businessContext },
+  //{ id: 'the-problem',             label: 'The problem',             show: true },
+  { id: 'user-segmentation',       label: 'The user I focused on — and why',       show: !!item.userSegmentation },
+  { id: 'problem-prioritisation',  label: 'The problem worth solving first',  show: !!item.problemPrioritisation },
+  { id: 'why-ai',                  label: 'Why AI — and why not something simpler',                 show: !!item.whyAI },
   { id: 'key-decisions',           label: 'Key decisions',           show: !!item.keyDecisions },
   { id: 'technical-architecture',  label: 'Technical architecture',  show: !!item.architecture },
   { id: 'risks',                   label: 'Risks & mitigations',     show: !!item.risks },
@@ -64,29 +64,21 @@ const tocItems = [
 
         {item.businessContext && (
           <div class="cs-section" id="business-context">
-            <h2>Business context</h2>
+            <h2>The business problem</h2>
             {item.businessContext.split('\n\n').map((para) => <p>{para.trim()}</p>)}
           </div>
         )}
 
-        <div class="cs-section" id="the-problem">
-          <h2>The problem</h2>
-          {item.problemDetail
-            ? item.problemDetail.split('\n\n').map((para) => <p>{para.trim()}</p>)
-            : <p>{item.problem}</p>
-          }
-        </div>
-
         {item.userSegmentation && (
           <div class="cs-section" id="user-segmentation">
-            <h2>User segmentation</h2>
+            <h2>The user</h2>
             {item.userSegmentation.split('\n\n').map((para) => <p>{para.trim()}</p>)}
           </div>
         )}
 
         {item.problemPrioritisation && (
           <div class="cs-section" id="problem-prioritisation">
-            <h2>Problem prioritisation</h2>
+            <h2>The user problem</h2>
             {item.problemPrioritisation.split('\n\n').map((para) => <p>{para.trim()}</p>)}
           </div>
         )}
