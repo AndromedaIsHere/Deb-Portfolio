@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 472" width="860" height="472">
+  <defs>
+    <marker id="arr" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <path d="M0,0.5 L0,6.5 L6,3.5 z" fill="#c45c26" opacity="0.75"/>
+    </marker>
+    <marker id="arr-m" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <path d="M0,0.5 L0,6.5 L6,3.5 z" fill="#8b8f96" opacity="0.65"/>
+    </marker>
+    <style>
+      text { font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="472" fill="#faf9f6"/>
+
+  <!-- ── Title ── -->
+  <text x="430" y="20" text-anchor="middle" font-size="9.5" font-weight="700"
+        letter-spacing="0.14em" fill="#5c5c5c">DYNAMIC TARGETING — MODEL ENSEMBLE ARCHITECTURE</text>
+
+  <!-- ── Column headers ── -->
+  <text x="86"  y="39" text-anchor="middle" font-size="7.5" font-weight="700" letter-spacing="0.12em" fill="#8b8f96">DATA INPUTS</text>
+  <text x="289" y="39" text-anchor="middle" font-size="7.5" font-weight="700" letter-spacing="0.12em" fill="#8b8f96">SPECIALISED MODELS</text>
+  <text x="508" y="39" text-anchor="middle" font-size="7.5" font-weight="700" letter-spacing="0.12em" fill="#8b8f96">ENSEMBLE</text>
+  <text x="707" y="39" text-anchor="middle" font-size="7.5" font-weight="700" letter-spacing="0.12em" fill="#8b8f96">DELIVERY</text>
+
+  <!-- ═══════════════════════════════════════════════
+       DATA SOURCE BOXES  x=12, w=148
+       rows at y = 55, 127, 199, 271, 343  h=62
+  ═══════════════════════════════════════════════ -->
+
+  <!-- Row 0: HCP Demographics -->
+  <rect x="12" y="55" width="148" height="62" rx="4" fill="#fdf4ef" stroke="#c45c26" stroke-width="1.2"/>
+  <rect x="12" y="55" width="4" height="62" rx="2" fill="#c45c26"/>
+  <text x="24" y="73"  font-size="10.5" font-weight="600" fill="#1a1a1a">HCP Demographics</text>
+  <text x="24" y="89"  font-size="9.5"  fill="#5c5c5c">Specialty · affiliation</text>
+  <text x="24" y="104" font-size="9"    fill="#8b8f96">Practice &amp; network</text>
+
+  <!-- Row 1: Sales & Interactions -->
+  <rect x="12" y="127" width="148" height="62" rx="4" fill="#fdf4ef" stroke="#c45c26" stroke-width="1.2"/>
+  <rect x="12" y="127" width="4" height="62" rx="2" fill="#c45c26"/>
+  <text x="24" y="145" font-size="10.5" font-weight="600" fill="#1a1a1a">Sales &amp; Interactions</text>
+  <text x="24" y="161" font-size="9.5"  fill="#5c5c5c">CRM · calls · samples</text>
+  <text x="24" y="176" font-size="9"    fill="#8b8f96">Daily refresh</text>
+
+  <!-- Row 2: Rx / Claims -->
+  <rect x="12" y="199" width="148" height="62" rx="4" fill="#fdf4ef" stroke="#c45c26" stroke-width="1.2"/>
+  <rect x="12" y="199" width="4" height="62" rx="2" fill="#c45c26"/>
+  <text x="24" y="217" font-size="10.5" font-weight="600" fill="#1a1a1a">Rx / Claims Data</text>
+  <text x="24" y="233" font-size="9.5"  fill="#5c5c5c">Prescription volumes</text>
+  <text x="24" y="248" font-size="9"    fill="#8b8f96">Weekly refresh</text>
+
+  <!-- Row 3: Payer & Managed Care -->
+  <rect x="12" y="271" width="148" height="62" rx="4" fill="#fdf4ef" stroke="#c45c26" stroke-width="1.2"/>
+  <rect x="12" y="271" width="4" height="62" rx="2" fill="#c45c26"/>
+  <text x="24" y="289" font-size="10.5" font-weight="600" fill="#1a1a1a">Payer &amp; Managed Care</text>
+  <text x="24" y="305" font-size="9.5"  fill="#5c5c5c">Formulary · access tier</text>
+  <text x="24" y="320" font-size="9"    fill="#8b8f96">Event-driven updates</text>
+
+  <!-- Row 4: Digital Engagement -->
+  <rect x="12" y="343" width="148" height="62" rx="4" fill="#fdf4ef" stroke="#c45c26" stroke-width="1.2"/>
+  <rect x="12" y="343" width="4" height="62" rx="2" fill="#c45c26"/>
+  <text x="24" y="361" font-size="10.5" font-weight="600" fill="#1a1a1a">Digital Engagement</text>
+  <text x="24" y="377" font-size="9.5"  fill="#5c5c5c">Events · content · web</text>
+  <text x="24" y="392" font-size="9"    fill="#8b8f96">Near real-time</text>
+
+  <!-- ── Data → Model arrows (5 horizontal) ── -->
+  <line x1="161" y1="86"  x2="201" y2="86"  stroke="#c45c26" stroke-width="1.3" marker-end="url(#arr)" opacity="0.6"/>
+  <line x1="161" y1="158" x2="201" y2="158" stroke="#c45c26" stroke-width="1.3" marker-end="url(#arr)" opacity="0.6"/>
+  <line x1="161" y1="230" x2="201" y2="230" stroke="#c45c26" stroke-width="1.3" marker-end="url(#arr)" opacity="0.6"/>
+  <line x1="161" y1="302" x2="201" y2="302" stroke="#c45c26" stroke-width="1.3" marker-end="url(#arr)" opacity="0.6"/>
+  <line x1="161" y1="374" x2="201" y2="374" stroke="#c45c26" stroke-width="1.3" marker-end="url(#arr)" opacity="0.6"/>
+
+  <!-- ═══════════════════════════════════════════════
+       SPECIALISED MODEL BOXES  x=204, w=168
+  ═══════════════════════════════════════════════ -->
+
+  <!-- Model 0: Prescribing Trends -->
+  <rect x="204" y="55" width="168" height="62" rx="4" fill="#ffffff" stroke="#e5e2dc" stroke-width="1"/>
+  <rect x="204" y="55" width="4" height="62" rx="2" fill="#c45c26" opacity="0.7"/>
+  <text x="216" y="71" font-size="7" font-weight="700" letter-spacing="0.13em" fill="#c45c26">PRESCRIBING TRENDS</text>
+  <text x="216" y="86" font-size="10.5" font-weight="600" fill="#1a1a1a">LSTM / RNN</text>
+  <text x="216" y="101" font-size="9.5" fill="#5c5c5c">Trajectory &amp; acceleration</text>
+  <text x="216" y="113" font-size="8.5" fill="#8b8f96">Time-series model</text>
+
+  <!-- Model 1: Behavioural Shift -->
+  <rect x="204" y="127" width="168" height="62" rx="4" fill="#ffffff" stroke="#e5e2dc" stroke-width="1"/>
+  <rect x="204" y="127" width="4" height="62" rx="2" fill="#c45c26" opacity="0.55"/>
+  <text x="216" y="143" font-size="7" font-weight="700" letter-spacing="0.13em" fill="#c45c26">BEHAVIOURAL SHIFT</text>
+  <text x="216" y="158" font-size="10.5" font-weight="600" fill="#1a1a1a">Change Detection</text>
+  <text x="216" y="173" font-size="9.5" fill="#5c5c5c">Competitive displacement</text>
+  <text x="216" y="185" font-size="8.5" fill="#8b8f96">Brand switching signals</text>
+
+  <!-- Model 2: Patient Count Prediction -->
+  <rect x="204" y="199" width="168" height="62" rx="4" fill="#ffffff" stroke="#e5e2dc" stroke-width="1"/>
+  <rect x="204" y="199" width="4" height="62" rx="2" fill="#c45c26" opacity="0.4"/>
+  <text x="216" y="215" font-size="7" font-weight="700" letter-spacing="0.13em" fill="#c45c26">PATIENT COUNT</text>
+  <text x="216" y="230" font-size="10.5" font-weight="600" fill="#1a1a1a">Prediction Model</text>
+  <text x="216" y="245" font-size="9.5" fill="#5c5c5c">Addressable population</text>
+  <text x="216" y="257" font-size="8.5" fill="#8b8f96">Demographic + claims</text>
+
+  <!-- Model 3: Payer Access Scoring -->
+  <rect x="204" y="271" width="168" height="62" rx="4" fill="#ffffff" stroke="#e5e2dc" stroke-width="1"/>
+  <rect x="204" y="271" width="4" height="62" rx="2" fill="#c45c26" opacity="0.28"/>
+  <text x="216" y="287" font-size="7" font-weight="700" letter-spacing="0.13em" fill="#c45c26">PAYER ACCESS</text>
+  <text x="216" y="302" font-size="10.5" font-weight="600" fill="#1a1a1a">Scoring Model</text>
+  <text x="216" y="317" font-size="9.5" fill="#5c5c5c">Formulary tier + delta</text>
+  <text x="216" y="329" font-size="8.5" fill="#8b8f96">Access trajectory</text>
+
+  <!-- Model 4: Engagement Propensity -->
+  <rect x="204" y="343" width="168" height="62" rx="4" fill="#ffffff" stroke="#e5e2dc" stroke-width="1"/>
+  <rect x="204" y="343" width="4" height="62" rx="2" fill="#c45c26" opacity="0.15"/>
+  <text x="216" y="359" font-size="7" font-weight="700" letter-spacing="0.13em" fill="#c45c26">ENGAGEMENT</text>
+  <text x="216" y="374" font-size="10.5" font-weight="600" fill="#1a1a1a">Propensity Model</text>
+  <text x="216" y="389" font-size="9.5" fill="#5c5c5c">Channel preference</text>
+  <text x="216" y="401" font-size="8.5" fill="#8b8f96">Interaction history</text>
+
+  <!-- ── Model fan-in bus bar → Ensemble ── -->
+  <!-- 5 horizontal stubs to bus bar at x=399 -->
+  <line x1="373" y1="86"  x2="399" y2="86"  stroke="#c45c26" stroke-width="1.1" opacity="0.5"/>
+  <line x1="373" y1="158" x2="399" y2="158" stroke="#c45c26" stroke-width="1.1" opacity="0.5"/>
+  <line x1="373" y1="230" x2="399" y2="230" stroke="#c45c26" stroke-width="1.1" opacity="0.5"/>
+  <line x1="373" y1="302" x2="399" y2="302" stroke="#c45c26" stroke-width="1.1" opacity="0.5"/>
+  <line x1="373" y1="374" x2="399" y2="374" stroke="#c45c26" stroke-width="1.1" opacity="0.5"/>
+  <!-- Vertical bus bar -->
+  <line x1="399" y1="86" x2="399" y2="374" stroke="#c45c26" stroke-width="1.5" opacity="0.4"/>
+  <!-- Single arrow from bus centre to ensemble -->
+  <line x1="399" y1="230" x2="418" y2="230" stroke="#c45c26" stroke-width="1.5" marker-end="url(#arr)" opacity="0.7"/>
+
+  <!-- ═══════════════════════════════════════════════
+       ENSEMBLE BOX  x=420, y=48, w=175, h=362
+  ═══════════════════════════════════════════════ -->
+  <rect x="420" y="48" width="175" height="362" rx="4" fill="#ffffff" stroke="#e5e2dc" stroke-width="1"/>
+  <rect x="420" y="48" width="4" height="362" rx="2" fill="#c45c26" opacity="0.55"/>
+
+  <text x="433" y="66" font-size="7.5" font-weight="700" letter-spacing="0.13em" fill="#c45c26">ENSEMBLE LAYER</text>
+  <line x1="433" y1="71" x2="588" y2="71" stroke="#e5e2dc" stroke-width="0.5"/>
+
+  <text x="433" y="91"  font-size="10.5" font-weight="600" fill="#1a1a1a">Composite opportunity</text>
+  <text x="433" y="107" font-size="10.5" font-weight="600" fill="#1a1a1a">score per HCP per brand</text>
+  <text x="433" y="125" font-size="9.5"  fill="#5c5c5c">Model weights calibrated</text>
+  <text x="433" y="140" font-size="9.5"  fill="#5c5c5c">per brand &amp; market context</text>
+
+  <line x1="433" y1="153" x2="588" y2="153" stroke="#e5e2dc" stroke-width="0.5"/>
+
+  <text x="433" y="170" font-size="7.5" font-weight="700" letter-spacing="0.13em" fill="#c45c26">EXPLAINABILITY</text>
+  <text x="433" y="189" font-size="10.5" font-weight="600" fill="#1a1a1a">SHAP attribution</text>
+  <text x="433" y="205" font-size="9.5"  fill="#5c5c5c">Per-model contribution</text>
+  <text x="433" y="221" font-size="9.5"  fill="#5c5c5c">aggregated to top-3 signals</text>
+  <text x="433" y="237" font-size="9.5"  fill="#5c5c5c">→ plain-language rationale</text>
+
+  <line x1="433" y1="250" x2="588" y2="250" stroke="#e5e2dc" stroke-width="0.5"/>
+
+  <text x="433" y="268" font-size="7.5" font-weight="700" letter-spacing="0.13em" fill="#c45c26">NEW MODELS</text>
+  <text x="433" y="287" font-size="10.5" font-weight="600" fill="#1a1a1a">Extensible by design</text>
+  <text x="433" y="303" font-size="9.5"  fill="#5c5c5c">Plug in new modules as</text>
+  <text x="433" y="319" font-size="9.5"  fill="#5c5c5c">new data sources emerge</text>
+  <text x="433" y="335" font-size="9.5"  fill="#5c5c5c">without rebuilding pipeline</text>
+
+  <text x="433" y="395" font-size="9"    fill="#8b8f96">Gradient boosting · SHAP</text>
+  <text x="433" y="408" font-size="9"    fill="#8b8f96">per-brand weight calibration</text>
+
+  <!-- ── Ensemble → delivery bus bar ── -->
+  <!-- Horizontal from ensemble right -->
+  <line x1="595" y1="230" x2="614" y2="230" stroke="#c45c26" stroke-width="1.4" opacity="0.65"/>
+  <!-- Vertical bus bar -->
+  <line x1="614" y1="132" x2="614" y2="302" stroke="#c45c26" stroke-width="1.4" opacity="0.45"/>
+  <!-- Arrow to Strategy Config -->
+  <line x1="614" y1="132" x2="636" y2="132" stroke="#c45c26" stroke-width="1.3" marker-end="url(#arr)" opacity="0.65"/>
+  <!-- Arrow to CRM -->
+  <line x1="614" y1="302" x2="636" y2="302" stroke="#c45c26" stroke-width="1.3" marker-end="url(#arr)" opacity="0.65"/>
+
+  <!-- ═══════════════════════════════════════════════
+       STRATEGY CONFIG  x=638, y=80, w=140, h=105
+  ═══════════════════════════════════════════════ -->
+  <rect x="638" y="80" width="140" height="105" rx="4" fill="#ffffff" stroke="#e5e2dc" stroke-width="1"/>
+  <rect x="638" y="80" width="4" height="105" rx="2" fill="#c45c26" opacity="0.35"/>
+  <text x="650" y="96" font-size="7" font-weight="700" letter-spacing="0.13em" fill="#c45c26">STRATEGY CONFIG</text>
+  <line x1="650" y1="101" x2="771" y2="101" stroke="#e5e2dc" stroke-width="0.5"/>
+  <text x="650" y="117" font-size="10"   fill="#1a1a1a">Territory constraints</text>
+  <text x="650" y="133" font-size="10"   fill="#1a1a1a">Frequency floors</text>
+  <text x="650" y="149" font-size="10"   fill="#1a1a1a">Signal priority weights</text>
+  <text x="650" y="178" font-size="8.5"  fill="#8b8f96">Commercial ops control</text>
+
+  <!-- ═══════════════════════════════════════════════
+       VEEVA CRM  x=638, y=210, w=140, h=165
+  ═══════════════════════════════════════════════ -->
+  <rect x="638" y="210" width="140" height="165" rx="4" fill="#fdf4ef" stroke="#c45c26" stroke-width="1.2"/>
+  <rect x="638" y="210" width="4" height="165" rx="2" fill="#c45c26"/>
+  <text x="650" y="227" font-size="7" font-weight="700" letter-spacing="0.13em" fill="#c45c26">VEEVA CRM</text>
+  <line x1="650" y1="232" x2="771" y2="232" stroke="#e5e2dc" stroke-width="0.5"/>
+  <text x="650" y="250" font-size="10.5" font-weight="600" fill="#1a1a1a">Priority call list</text>
+  <text x="650" y="267" font-size="10"   fill="#5c5c5c">Ranked + attributed</text>
+  <text x="650" y="283" font-size="10"   fill="#5c5c5c">Pre-loaded daily</text>
+  <text x="650" y="305" font-size="10.5" font-weight="600" fill="#1a1a1a">Override → feedback</text>
+  <text x="650" y="321" font-size="9.5"  fill="#5c5c5c">Accept · snooze · override</text>
+  <text x="650" y="337" font-size="9.5"  fill="#5c5c5c">all logged as signal</text>
+  <text x="650" y="358" font-size="8.5"  fill="#8b8f96">Rep override recalibrates</text>
+  <text x="650" y="370" font-size="8.5"  fill="#8b8f96">ensemble weights</text>
+
+  <!-- ── Feedback loop arrow: CRM bottom → back to data sources ── -->
+  <polyline points="708,376 708,432 86,432 86,418"
+    fill="none" stroke="#8b8f96" stroke-width="1.1" stroke-dasharray="4,2.5"
+    marker-end="url(#arr-m)" opacity="0.4"/>
+  <text x="380" y="447" text-anchor="middle" font-size="9" fill="#8b8f96" opacity="0.7">Rep override feedback · ensemble recalibration · model weights updated each scoring cycle</text>
+
+</svg>

@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(cat /dev/null > \"/mnt/c/Users/z0052tba/Desktop/siemens_ppt_builder.py\" 2>/dev/null || true; echo \"cleared\")",
-      "PowerShell(Start-Process \"C:\\\\Users\\\\z0052tba\\\\Desktop\\\\ai_roi_improvement_proposal_20260625.pptx\")"
+      "PowerShell(Start-Process \"C:\\\\Users\\\\z0052tba\\\\Desktop\\\\ai_roi_improvement_proposal_20260625.pptx\")",
+      "WebSearch",
+      "WebFetch(domain:zaidyn.zs.com)",
+      "Bash(curl -s http://localhost:4322/ai/dynamic-targeting)"
     ],
     "additionalDirectories": [
       "\\mnt\\c\\Users\\z0052tba\\Desktop"
