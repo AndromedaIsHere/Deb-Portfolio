@@ -6,6 +6,7 @@ export const maintenanceCopilot = {
   metric: '67% reduction in troubleshooting time',
   problem: 'Technicians spent excessive time troubleshooting maintenance issues and searching documentation.',
   solution: 'LLM-powered conversational assistant embedded directly into maintenance workflows.',
+  metaDescription: 'Maintenance Copilot — AI product case study by Debajyoti Das. How a RAG-powered conversational assistant embedded in a CMMS reduced technician troubleshooting time by 67% and became the #1 reason for contract renewal.',
 
   businessContext: `Before I wrote a single product spec, I made sure I understood what the business needed — not just what users wanted.
 

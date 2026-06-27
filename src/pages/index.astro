@@ -23,18 +23,39 @@ const speaking = [
 ---
 
 <Layout
-  title="Deb | AI Product Manager"
-  description="AI Product Manager writing about intelligent products, strategy, and the future of work."
+  title="Debajyoti Das — Senior AI Product Manager"
+  description="Debajyoti Das is a Senior AI Product Manager with 6+ years building enterprise AI products across asset management, life sciences, and fintech. Currently at Siemens Brightly."
 >
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Debajyoti Das",
+        "url": "https://www.dasdebajyoti.com",
+        "jobTitle": "Senior AI Product Manager",
+        "description": "Senior AI Product Manager with 6+ years building enterprise AI products across asset management, life sciences, and fintech.",
+        "sameAs": ["https://www.linkedin.com/in/debajyoti-das-a265a938/"],
+        "worksFor": { "@type": "Organization", "name": "Siemens Brightly" },
+        "email": "ddas2302@gmail.com",
+        "image": "https://www.dasdebajyoti.com/20230607_090330.jpg"
+      },
+      {
+        "@type": "WebSite",
+        "name": "Debajyoti Das",
+        "url": "https://www.dasdebajyoti.com"
+      }
+    ]
+  })} />
   <div class="home">
 
     <!-- ── Hero ──────────────────────────────────────────── -->
     <section class="hero hero-overview">
       <div class="hero-overview-text">
-        <p class="hero-greeting">
+        <h1 class="hero-greeting">
           Hey, I'm Debajyoti — a Senior Product Manager helping teams ship intelligent products powered by AI that
           drives real business outcomes.
-        </p>
+        </h1>
         <p class="hero-intro">
           I build enterprise products that help organizations make better decisions, automate complex workflows, and unlock measurable business value.
         </p>
@@ -59,7 +80,7 @@ const speaking = [
       <div class="hero-overview-image">
         <img
           src="/20230607_090330.jpg"
-          alt="Deb"
+          alt="Debajyoti Das — Senior AI Product Manager"
           class="hero-portrait"
           width="320"
           height="400"

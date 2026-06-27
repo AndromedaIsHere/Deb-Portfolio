@@ -6,6 +6,7 @@ export const nextBestAction = {
   metric: '30+ customers globally across multiple therapeutic areas',
   problem: 'Commercial engagement was channel-siloed and lacked personalisation — reps, email, and digital channels acted independently.',
   solution: 'Recommendation engine that surfaces the next best action across channels for each healthcare provider interaction.',
+  metaDescription: 'Next Best Action — AI product case study by Debajyoti Das. A reinforcement learning recommendation engine that coordinated omnichannel HCP engagement for 30+ pharma customers globally, improving field call effectiveness.',
 
   problemDetail: `In pharmaceutical commercial operations, the rep visit is still the primary engagement channel — but it's no longer the only one. Email, digital detailing, remote meetings, and event invitations all compete for HCP attention. Without coordination, the same provider receives redundant outreach from multiple channels simultaneously, while gaps open elsewhere.
 

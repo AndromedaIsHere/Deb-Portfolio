@@ -12,6 +12,10 @@ export function getStaticPaths() {
 
 const { item } = Astro.props;
 
+const siteUrl = 'https://www.dasdebajyoti.com';
+const pageUrl = `${siteUrl}/ai/${item.slug}/`;
+const metaDesc = item.metaDescription ?? item.solution;
+
 // Build the TOC from whichever sections exist for this item
 const tocItems = [
   { id: 'business-context',        label: 'The business problem I was actually solving',       show: !!item.businessContext },
@@ -32,9 +36,43 @@ const tocItems = [
 ---
 
 <Layout
-  title={`${item.title} | Deb`}
-  description={item.solution}
+  title={`${item.title} — AI Case Study | Debajyoti Das`}
+  description={metaDesc}
+  type="article"
+  imageAlt={`${item.title} — AI product case study by Debajyoti Das`}
 >
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home",         "item": `${siteUrl}/` },
+          { "@type": "ListItem", "position": 2, "name": "AI in action", "item": `${siteUrl}/#ai-in-action` },
+          { "@type": "ListItem", "position": 3, "name": item.title,     "item": pageUrl }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": item.title,
+        "description": metaDesc,
+        "author": {
+          "@type": "Person",
+          "name": "Debajyoti Das",
+          "url": siteUrl
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Debajyoti Das",
+          "url": siteUrl
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": pageUrl
+        }
+      }
+    ]
+  })} />
   <div class="cs-layout">
 
     <!-- ── Left nav (sticky TOC) ── -->

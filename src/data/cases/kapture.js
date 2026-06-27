@@ -6,6 +6,7 @@ export const kapture = {
   metric: '80% faster processing · 99.5% accuracy · 50+ enterprise customers in 2 months',
   problem: 'Document-intensive workflows in financial services were slow, error-prone, and dependent on manual review at scale.',
   solution: 'Intelligent Document Processing platform that classifies, extracts, and validates unstructured financial documents end-to-end.',
+  metaDescription: 'Kapture — AI product case study by Debajyoti Das. A hybrid OCR and LLM document processing platform that achieved 99.5% extraction accuracy and onboarded 50+ enterprise financial services customers within 2 months.',
 
   problemDetail: `Financial services organisations process millions of documents annually — loan applications, insurance claims, mortgage packages, KYC bundles. Every document is a structured decision waiting inside unstructured content. And for most organisations, the process of getting to that decision runs through manual extraction, human review, and re-keying into downstream systems.
 

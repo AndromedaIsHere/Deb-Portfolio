@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.dasdebajyoti.com/sitemap-index.xml

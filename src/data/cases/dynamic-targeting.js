@@ -6,6 +6,7 @@ export const dynamicTargeting = {
   metric: '4–10% incremental lift in brand sales · 50% greater field effectiveness · 10+ global organisations',
   problem: 'Commercial teams relied on static, quarterly HCP segmentation — missing high-potential prescribers and misdirecting rep effort.',
   solution: 'AI-driven HCP target decisioning platform that scores and prioritises healthcare providers in real time using live commercial signals.',
+  metaDescription: 'Dynamic Targeting — AI product case study by Debajyoti Das. A model ensemble platform (LSTM, behavioural shift, patient prediction) that delivered 4–10% incremental brand sales lift across 10+ global life sciences organisations.',
 
   businessContext: `Dynamic Targeting wasn't a research project. It was a commercial bet on a specific hypothesis: that pharma companies were leaving measurable revenue on the table because their targeting was too slow.
 
