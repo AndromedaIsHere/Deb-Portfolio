@@ -7,8 +7,8 @@ import { kapture } from './cases/kapture.js';
 
 export const aiInAction = [
   maintenanceCopilot,
-  smartScheduling,
-  duplicateDetection,
+  //smartScheduling,
+  //duplicateDetection,
   dynamicTargeting,
   nextBestAction,
   kapture,
