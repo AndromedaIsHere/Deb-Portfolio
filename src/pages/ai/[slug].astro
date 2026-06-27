@@ -19,10 +19,11 @@ const tocItems = [
   { id: 'user-segmentation',       label: 'The user I focused on — and why',       show: !!item.userSegmentation },
   { id: 'problem-prioritisation',  label: 'The problem worth solving first',  show: !!item.problemPrioritisation },
   { id: 'why-ai',                  label: 'Why AI — and why not something simpler',                 show: !!item.whyAI },
+  { id: 'solution-design',        label: 'Solution design',         show: !!item.solutionDesign },
   { id: 'key-decisions',           label: 'Key decisions',           show: !!item.keyDecisions },
   { id: 'technical-architecture',  label: 'Technical architecture',  show: !!item.architecture },
   { id: 'risks',                   label: 'Risks & mitigations',     show: !!item.risks },
-  { id: 'outcome',                 label: 'Outcome',                 show: true },
+  //{ id: 'outcome',                 label: 'Outcome',                 show: true },
   { id: 'metrics',                 label: 'How I\'d measure success', show: !!item.metrics },
   { id: 'what-i-learned',          label: 'What I learned',          show: !!item.learned },
   { id: 'my-role',                 label: 'My role',                 show: true },
@@ -90,9 +91,24 @@ const tocItems = [
           </div>
         )}
 
+        {item.solutionDesign && (
+          <div class="cs-section" id="solution-design">
+            <h2>Solution design</h2>
+            {item.solutionDesign.overview && (
+              <p>{item.solutionDesign.overview}</p>
+            )}
+            {item.solutionDesign.steps && item.solutionDesign.steps.map((step) => (
+              <div class="cs-decision">
+                <p><strong>{step.title}</strong></p>
+                {step.detail.split('\n\n').map((para) => <p>{para.trim()}</p>)}
+              </div>
+            ))}
+          </div>
+        )}
+
         {item.keyDecisions && (
           <div class="cs-section" id="key-decisions">
-            <h2>Key decisions</h2>
+            <h2>The Solution</h2>
             {item.keyDecisions.map((d) => (
               <div class="cs-decision">
                 <p><strong>{d.decision}</strong></p>
@@ -104,7 +120,7 @@ const tocItems = [
 
         {item.architecture && (
           <div class="cs-section" id="technical-architecture">
-            <h2>Technical architecture</h2>
+            <h2>The architecture</h2>
             <p>{item.architecture.overview}</p>
             {item.architecture.layers && item.architecture.layers.map((l) => (
               <div class="cs-arch-block">
@@ -112,7 +128,15 @@ const tocItems = [
                 <p>{l.detail}</p>
               </div>
             ))}
-            {item.architecture.frameworks && (
+            {item.architecture.stackImage ? (
+              <div class="cs-arch-image">
+                <img
+                  src={item.architecture.stackImage}
+                  alt="Technical architecture diagram"
+                  class="cs-arch-img"
+                />
+              </div>
+            ) : item.architecture.frameworks && (
               <div class="cs-arch-stack">
                 <p class="cs-arch-stack-label">Stack</p>
                 <ul class="cs-arch-framework-list">
@@ -137,29 +161,35 @@ const tocItems = [
           </div>
         )}
 
-        <div class="cs-section" id="outcome">
-          <h2>Outcome</h2>
-          <ul>
-            {item.impact.map((point) => <li>{point}</li>)}
-          </ul>
-        </div>
-
         {item.metrics && (
           <div class="cs-section" id="metrics">
             <h2>How I'd measure success</h2>
             <div class="cs-metrics">
-              <div class="cs-metrics-group">
-                <p class="cs-metrics-label">Business</p>
-                <ul>{item.metrics.business.map((m) => <li>{m}</li>)}</ul>
+              <div class="cs-metrics-header">
+                <span>Metric</span>
+                <span>Observed</span>
               </div>
-              <div class="cs-metrics-group">
-                <p class="cs-metrics-label">Product</p>
-                <ul>{item.metrics.product.map((m) => <li>{m}</li>)}</ul>
-              </div>
-              <div class="cs-metrics-group">
-                <p class="cs-metrics-label">AI-specific</p>
-                <ul>{item.metrics.ai.map((m) => <li>{m}</li>)}</ul>
-              </div>
+              {[
+                { label: 'Business',    items: item.metrics.business },
+                { label: 'Product',     items: item.metrics.product },
+                { label: 'AI-specific', items: item.metrics.ai },
+              ].map(({ label, items }) => (
+                <div class="cs-metrics-group">
+                  <p class="cs-metrics-label">{label}</p>
+                  {items.map((m) => {
+                    const text    = typeof m === 'string' ? m : m.metric;
+                    const observed = typeof m === 'string' ? null : m.observed;
+                    return (
+                      <div class="cs-metrics-row">
+                        <span class="cs-metrics-text">{text}</span>
+                        <span class={`cs-metrics-observed${observed ? '' : ' cs-metrics-observed--empty'}`}>
+                          {observed ?? '—'}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              ))}
             </div>
           </div>
         )}

@@ -88,9 +88,10 @@ const speaking = [
       <p class="section-desc">What I've built with AI</p>
       <ul class="notes-list">
         {aiInAction.map((item) => (
-          <li class="notes-list-item">
+          <li class="notes-list-item notes-list-item--case-study">
             <a href={`/ai/${item.slug}`}>
               <h3>{item.title}</h3>
+              {item.metric && <p class="notes-list-metric">{item.metric}</p>}
             </a>
             <span class="notes-list-meta">
               <span class="notes-list-category">{item.domain}</span>

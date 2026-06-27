@@ -3,6 +3,7 @@ export const duplicateDetection = {
   title: 'Duplicate Detection',
   domain: 'Enterprise Asset Management',
 
+  metric: 'Cut duplicate asset records by 15–25% across enterprise accounts',
   problem: 'Duplicate assets and work records reduced data quality and inflated operational costs.',
   solution: 'ML-powered duplicate detection that surfaces and merges redundant records across the asset hierarchy.',
 

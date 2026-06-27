@@ -464,6 +464,18 @@ a:hover { text-decoration: underline; }
   flex-shrink: 0;
 }
 
+.notes-list-metric {
+  font-size: .8rem;
+  color: var(--color-text-muted);
+  margin: .2rem 0 0;
+  font-weight: 400;
+  font-family: var(--font-sans);
+  line-height: 1.4;
+}
+
+.notes-list-item--case-study a { display: flex; flex-direction: column; }
+.notes-list-item--case-study h3 { margin: 0; }
+
 .notes-list-label,
 .notes-list-category {
   font-size: .75rem;
@@ -825,6 +837,18 @@ a:hover { text-decoration: underline; }
   margin: 0 0 .75rem !important;
 }
 
+.cs-arch-image {
+  margin-top: 1.25rem;
+}
+
+.cs-arch-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  display: block;
+}
+
 .cs-arch-framework-list {
   list-style: none !important;
   padding: 0 !important;
@@ -846,27 +870,65 @@ a:hover { text-decoration: underline; }
 
 /* ── Metrics section ── */
 .cs-metrics {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
   margin-top: .5rem;
 }
 
+.cs-metrics-header {
+  display: grid;
+  grid-template-columns: 1fr 7rem;
+  gap: 1rem;
+  padding: 0 0 .4rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--color-text-muted);
+}
+
 .cs-metrics-group {
-  padding: .9rem 1.1rem;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
+  margin-top: 1.25rem;
 }
 
 .cs-metrics-label {
-  font-family: var(--font-sans);
   font-size: .7rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .08em;
   color: var(--color-accent);
-  margin: 0 0 .6rem !important;
+  margin: 0 0 .5rem !important;
+}
+
+.cs-metrics-row {
+  display: grid;
+  grid-template-columns: 1fr 7rem;
+  gap: 1rem;
+  padding: .45rem 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: baseline;
+}
+
+.cs-metrics-row:last-child {
+  border-bottom: none;
+}
+
+.cs-metrics-text {
+  font-size: .95rem;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.cs-metrics-observed {
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-align: right;
+}
+
+.cs-metrics-observed--empty {
+  font-weight: 400;
+  color: var(--color-text-muted);
+  opacity: .45;
 }
 
 /* ── Case study: inline image ── */

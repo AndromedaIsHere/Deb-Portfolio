@@ -3,6 +3,7 @@ export const nextBestAction = {
   title: 'Next Best Action',
   domain: 'Life Sciences',
 
+  metric: '30+ customers globally across multiple therapeutic areas',
   problem: 'Commercial engagement was channel-siloed and lacked personalisation — reps, email, and digital channels acted independently.',
   solution: 'Recommendation engine that surfaces the next best action across channels for each healthcare provider interaction.',
 

@@ -3,6 +3,7 @@ export const dynamicTargeting = {
   title: 'Dynamic Targeting',
   domain: 'Life Sciences',
 
+  metric: '3–5% sales uplift across 10+ global pharma organisations',
   problem: 'Commercial teams relied on static segmentation to identify and prioritise healthcare providers — missing high-value opportunities and wasting rep time.',
   solution: 'Commercial decision intelligence platform using AI-driven dynamic targeting to rank and prioritise HCPs in real time.',
 

@@ -3,6 +3,7 @@ export const kapture = {
   title: 'Kapture',
   domain: 'Banking · Insurance · Mortgage',
 
+  metric: '80% faster processing · 99.5% accuracy · 50+ enterprise customers in 2 months',
   problem: 'Document-intensive workflows in financial services were slow, error-prone, and dependent on manual review at scale.',
   solution: 'Intelligent Document Processing platform that classifies, extracts, and validates unstructured financial documents end-to-end.',
 

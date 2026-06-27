@@ -3,6 +3,7 @@ export const smartScheduling = {
   title: 'Smart Scheduling',
   domain: 'Enterprise Asset Management',
 
+  metric: 'Improved on-time completion for critical assets',
   problem: 'Maintenance scheduling was manual and inefficient.',
   solution: 'AI-assisted scheduling recommendations that optimise technician utilisation and asset uptime.',
 
