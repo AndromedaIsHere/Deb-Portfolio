@@ -85,3 +85,543 @@
 11:25:33 [watch] src/pages/ai/[slug].astro
 11:25:33 [watch] src/pages/ai/[slug].astro
 11:25:34 [200] /ai/maintenance-copilot/ 7ms
+11:26:50 [200] / 6ms
+18:25:38 [200] /ai/maintenance-copilot/ 18ms
+18:25:41 [200] / 6ms
+18:25:47 [200] /ai/dynamic-targeting 8ms
+18:30:32 [watch] src/data/cases/dynamic-targeting.js
+18:30:33 [200] /ai/dynamic-targeting 16ms
+18:31:08 [watch] src/data/cases/dynamic-targeting.js
+18:31:08 [watch] src/data/cases/dynamic-targeting.js
+18:31:08 [watch] src/data/cases/dynamic-targeting.js
+18:31:08 [watch] src/data/cases/dynamic-targeting.js
+18:31:08 [watch] src/data/cases/dynamic-targeting.js
+18:31:09 [watch] src/data/cases/dynamic-targeting.js
+18:31:09 [watch] src/data/cases/dynamic-targeting.js
+18:31:09 [ERROR] Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Stack trace:
+    at C:/Users/z0052tba/Deb-Portfolio/src/data/cases/dynamic-targeting.js:8:87
+    [...] See full stack trace in the browser, or rerun with --verbose.
+18:32:25 [watch] src/data/cases/dynamic-targeting.js
+18:32:25 [watch] src/data/cases/dynamic-targeting.js
+18:32:26 [watch] src/data/cases/dynamic-targeting.js
+18:32:26 [watch] src/data/cases/dynamic-targeting.js
+18:32:26 [200] /ai/dynamic-targeting 11ms
+18:33:49 [watch] src/data/cases/dynamic-targeting.js
+18:33:49 [watch] src/data/cases/dynamic-targeting.js
+18:33:50 [watch] src/data/cases/dynamic-targeting.js
+18:33:50 [watch] src/data/cases/dynamic-targeting.js
+18:33:50 [watch] src/data/cases/dynamic-targeting.js
+18:33:50 [watch] src/data/cases/dynamic-targeting.js
+18:33:50 [200] /ai/dynamic-targeting 8ms
+18:34:30 [watch] src/data/cases/dynamic-targeting.js
+18:34:31 [200] /ai/dynamic-targeting 9ms
+18:35:18 [watch] src/data/cases/dynamic-targeting.js
+18:35:18 [watch] src/data/cases/dynamic-targeting.js
+18:35:19 [watch] src/data/cases/dynamic-targeting.js
+18:35:19 [watch] src/data/cases/dynamic-targeting.js
+18:35:19 [watch] src/data/cases/dynamic-targeting.js
+18:35:20 [200] /ai/dynamic-targeting 12ms
+18:35:33 [watch] src/data/cases/dynamic-targeting.js
+18:35:33 [watch] src/data/cases/dynamic-targeting.js
+18:35:34 [watch] src/data/cases/dynamic-targeting.js
+18:35:34 [watch] src/data/cases/dynamic-targeting.js
+18:35:35 [200] /ai/dynamic-targeting 8ms
+18:35:52 [watch] src/data/cases/dynamic-targeting.js
+18:35:53 [watch] src/data/cases/dynamic-targeting.js
+18:35:53 [watch] src/data/cases/dynamic-targeting.js
+18:35:54 [200] /ai/dynamic-targeting 9ms
+18:36:04 [watch] src/data/cases/dynamic-targeting.js
+18:36:04 [watch] src/data/cases/dynamic-targeting.js
+18:36:04 [watch] src/data/cases/dynamic-targeting.js
+18:36:05 [watch] src/data/cases/dynamic-targeting.js
+18:36:05 [200] /ai/dynamic-targeting 7ms
+18:36:05 [watch] src/data/cases/dynamic-targeting.js
+18:36:05 [watch] src/data/cases/dynamic-targeting.js
+18:36:05 [watch] src/data/cases/dynamic-targeting.js
+18:36:05 [watch] src/data/cases/dynamic-targeting.js
+18:36:06 [watch] src/data/cases/dynamic-targeting.js
+18:36:06 [watch] src/data/cases/dynamic-targeting.js
+18:36:06 [200] /ai/dynamic-targeting 3ms
+18:36:06 [watch] src/data/cases/dynamic-targeting.js
+18:37:13 [watch] src/data/cases/dynamic-targeting.js
+18:37:14 [watch] src/data/cases/dynamic-targeting.js
+18:37:14 [watch] src/data/cases/dynamic-targeting.js
+18:37:14 [watch] src/data/cases/dynamic-targeting.js
+18:37:14 [200] /ai/dynamic-targeting 9ms
+18:37:26 [watch] src/data/cases/dynamic-targeting.js
+18:37:26 [watch] src/data/cases/dynamic-targeting.js
+18:37:27 [200] /ai/dynamic-targeting 12ms
+18:37:32 [watch] src/data/cases/dynamic-targeting.js
+18:37:32 [watch] src/data/cases/dynamic-targeting.js
+18:37:33 [watch] src/data/cases/dynamic-targeting.js
+18:37:33 [200] /ai/dynamic-targeting 7ms
+18:37:33 [watch] src/data/cases/dynamic-targeting.js
+18:37:33 [watch] src/data/cases/dynamic-targeting.js
+18:37:33 [watch] src/data/cases/dynamic-targeting.js
+18:37:48 [watch] src/data/cases/dynamic-targeting.js
+18:37:49 [watch] src/data/cases/dynamic-targeting.js
+18:37:49 [watch] src/data/cases/dynamic-targeting.js
+18:37:49 [watch] src/data/cases/dynamic-targeting.js
+18:37:49 [200] /ai/dynamic-targeting 10ms
+18:37:49 [watch] src/data/cases/dynamic-targeting.js
+18:37:49 [watch] src/data/cases/dynamic-targeting.js
+18:37:49 [watch] src/data/cases/dynamic-targeting.js
+18:37:50 [watch] src/data/cases/dynamic-targeting.js
+18:37:50 [200] /ai/dynamic-targeting 4ms
+18:38:16 [watch] src/data/cases/dynamic-targeting.js
+18:38:16 [watch] src/data/cases/dynamic-targeting.js
+18:38:16 [200] /ai/dynamic-targeting 8ms
+18:38:16 [watch] src/data/cases/dynamic-targeting.js
+18:38:16 [watch] src/data/cases/dynamic-targeting.js
+18:38:16 [watch] src/data/cases/dynamic-targeting.js
+18:38:17 [watch] src/data/cases/dynamic-targeting.js
+18:38:17 [watch] src/data/cases/dynamic-targeting.js
+18:38:17 [200] /ai/dynamic-targeting 5ms
+18:38:17 [watch] src/data/cases/dynamic-targeting.js
+18:38:17 [watch] src/data/cases/dynamic-targeting.js
+18:39:04 [watch] src/data/cases/dynamic-targeting.js
+18:39:04 [watch] src/data/cases/dynamic-targeting.js
+18:39:04 [watch] src/data/cases/dynamic-targeting.js
+18:39:04 [watch] src/data/cases/dynamic-targeting.js
+18:39:05 [watch] src/data/cases/dynamic-targeting.js
+18:39:05 [watch] src/data/cases/dynamic-targeting.js
+18:39:05 [200] /ai/dynamic-targeting 10ms
+18:39:05 [watch] src/data/cases/dynamic-targeting.js
+18:39:05 [watch] src/data/cases/dynamic-targeting.js
+18:39:05 [watch] src/data/cases/dynamic-targeting.js
+18:39:06 [200] /ai/dynamic-targeting 2ms
+18:39:26 [watch] src/data/cases/dynamic-targeting.js
+18:39:26 [watch] src/data/cases/dynamic-targeting.js
+18:39:27 [watch] src/data/cases/dynamic-targeting.js
+18:39:27 [watch] src/data/cases/dynamic-targeting.js
+18:39:27 [200] /ai/dynamic-targeting 9ms
+18:39:27 [watch] src/data/cases/dynamic-targeting.js
+18:39:27 [watch] src/data/cases/dynamic-targeting.js
+18:39:36 [watch] src/data/cases/dynamic-targeting.js
+18:39:36 [watch] src/data/cases/dynamic-targeting.js
+18:39:36 [200] /ai/dynamic-targeting 5ms
+18:39:36 [watch] src/data/cases/dynamic-targeting.js
+18:39:36 [watch] src/data/cases/dynamic-targeting.js
+18:39:36 [watch] src/data/cases/dynamic-targeting.js
+18:39:37 [200] /ai/dynamic-targeting 4ms
+18:39:55 [watch] src/data/cases/dynamic-targeting.js
+18:39:56 [watch] src/data/cases/dynamic-targeting.js
+18:39:56 [200] /ai/dynamic-targeting 11ms
+18:39:56 [watch] src/data/cases/dynamic-targeting.js
+18:39:56 [watch] src/data/cases/dynamic-targeting.js
+18:40:27 [watch] src/data/cases/dynamic-targeting.js
+18:40:27 [watch] src/data/cases/dynamic-targeting.js
+18:40:27 [watch] src/data/cases/dynamic-targeting.js
+18:40:28 [200] /ai/dynamic-targeting 9ms
+18:41:18 [watch] src/data/cases/dynamic-targeting.js
+18:41:19 [watch] src/data/cases/dynamic-targeting.js
+18:41:19 [watch] src/data/cases/dynamic-targeting.js
+18:41:19 [watch] src/data/cases/dynamic-targeting.js
+18:41:19 [watch] src/data/cases/dynamic-targeting.js
+18:41:19 [watch] src/data/cases/dynamic-targeting.js
+18:41:19 [watch] src/data/cases/dynamic-targeting.js
+18:41:20 [200] /ai/dynamic-targeting 11ms
+18:41:30 [watch] src/data/cases/dynamic-targeting.js
+18:41:30 [watch] src/data/cases/dynamic-targeting.js
+18:41:30 [watch] src/data/cases/dynamic-targeting.js
+18:41:30 [watch] src/data/cases/dynamic-targeting.js
+18:41:31 [200] /ai/dynamic-targeting 11ms
+18:41:31 [watch] src/data/cases/dynamic-targeting.js
+18:41:31 [watch] src/data/cases/dynamic-targeting.js
+18:41:31 [watch] src/data/cases/dynamic-targeting.js
+18:41:31 [watch] src/data/cases/dynamic-targeting.js
+18:41:32 [watch] src/data/cases/dynamic-targeting.js
+18:41:32 [watch] src/data/cases/dynamic-targeting.js
+18:41:32 [watch] src/data/cases/dynamic-targeting.js
+18:41:32 [watch] src/data/cases/dynamic-targeting.js
+18:41:32 [watch] src/data/cases/dynamic-targeting.js
+18:41:32 [watch] src/data/cases/dynamic-targeting.js
+18:41:33 [watch] src/data/cases/dynamic-targeting.js
+18:41:33 [watch] src/data/cases/dynamic-targeting.js
+18:41:34 [200] /ai/dynamic-targeting 4ms
+18:42:20 [watch] src/data/cases/dynamic-targeting.js
+18:42:20 [watch] src/data/cases/dynamic-targeting.js
+18:42:20 [watch] src/data/cases/dynamic-targeting.js
+18:42:21 [200] /ai/dynamic-targeting 8ms
+18:43:02 [watch] src/data/cases/dynamic-targeting.js
+18:43:02 [watch] src/data/cases/dynamic-targeting.js
+18:43:02 [watch] src/data/cases/dynamic-targeting.js
+18:43:02 [watch] src/data/cases/dynamic-targeting.js
+18:43:02 [watch] src/data/cases/dynamic-targeting.js
+18:43:03 [watch] src/data/cases/dynamic-targeting.js
+18:43:03 [watch] src/data/cases/dynamic-targeting.js
+18:43:03 [watch] src/data/cases/dynamic-targeting.js
+18:43:03 [watch] src/data/cases/dynamic-targeting.js
+18:43:04 [watch] src/data/cases/dynamic-targeting.js
+18:43:04 [200] /ai/dynamic-targeting 5ms
+18:43:08 [watch] src/data/cases/dynamic-targeting.js
+18:43:08 [watch] src/data/cases/dynamic-targeting.js
+18:43:08 [watch] src/data/cases/dynamic-targeting.js
+18:43:09 [watch] src/data/cases/dynamic-targeting.js
+18:43:09 [200] /ai/dynamic-targeting 4ms
+18:43:29 [watch] src/data/cases/dynamic-targeting.js
+18:43:29 [watch] src/data/cases/dynamic-targeting.js
+18:43:29 [watch] src/data/cases/dynamic-targeting.js
+18:43:29 [200] /ai/dynamic-targeting 9ms
+18:43:31 [watch] src/data/cases/dynamic-targeting.js
+18:43:31 [watch] src/data/cases/dynamic-targeting.js
+18:43:31 [watch] src/data/cases/dynamic-targeting.js
+18:43:32 [watch] src/data/cases/dynamic-targeting.js
+18:43:32 [200] /ai/dynamic-targeting 3ms
+18:43:45 [watch] src/data/cases/dynamic-targeting.js
+18:43:45 [watch] src/data/cases/dynamic-targeting.js
+18:43:45 [watch] src/data/cases/dynamic-targeting.js
+18:43:45 [watch] src/data/cases/dynamic-targeting.js
+18:43:45 [watch] src/data/cases/dynamic-targeting.js
+18:43:45 [watch] src/data/cases/dynamic-targeting.js
+18:43:46 [watch] src/data/cases/dynamic-targeting.js
+18:43:46 [200] /ai/dynamic-targeting 5ms
+18:44:09 [watch] src/data/cases/dynamic-targeting.js
+18:44:09 [watch] src/data/cases/dynamic-targeting.js
+18:44:09 [watch] src/data/cases/dynamic-targeting.js
+18:44:10 [watch] src/data/cases/dynamic-targeting.js
+18:44:10 [200] /ai/dynamic-targeting 15ms
+18:44:10 [watch] src/data/cases/dynamic-targeting.js
+18:44:10 [watch] src/data/cases/dynamic-targeting.js
+18:44:24 [watch] src/data/cases/dynamic-targeting.js
+18:44:24 [watch] src/data/cases/dynamic-targeting.js
+18:44:25 [watch] src/data/cases/dynamic-targeting.js
+18:44:25 [watch] src/data/cases/dynamic-targeting.js
+18:44:26 [200] /ai/dynamic-targeting 13ms
+18:44:35 [watch] src/data/cases/dynamic-targeting.js
+18:44:35 [watch] src/data/cases/dynamic-targeting.js
+18:44:36 [watch] src/data/cases/dynamic-targeting.js
+18:44:36 [200] /ai/dynamic-targeting 4ms
+18:44:46 [watch] src/data/cases/dynamic-targeting.js
+18:44:46 [watch] src/data/cases/dynamic-targeting.js
+18:44:46 [watch] src/data/cases/dynamic-targeting.js
+18:44:46 [watch] src/data/cases/dynamic-targeting.js
+18:44:47 [watch] src/data/cases/dynamic-targeting.js
+18:44:47 [watch] src/data/cases/dynamic-targeting.js
+18:44:48 [200] /ai/dynamic-targeting 8ms
+18:45:08 [watch] src/data/cases/dynamic-targeting.js
+18:45:08 [watch] src/data/cases/dynamic-targeting.js
+18:45:08 [watch] src/data/cases/dynamic-targeting.js
+18:45:09 [watch] src/data/cases/dynamic-targeting.js
+18:45:09 [200] /ai/dynamic-targeting 8ms
+18:45:09 [watch] src/data/cases/dynamic-targeting.js
+18:45:09 [watch] src/data/cases/dynamic-targeting.js
+18:45:09 [watch] src/data/cases/dynamic-targeting.js
+18:46:30 [watch] src/data/cases/dynamic-targeting.js
+18:46:30 [watch] src/data/cases/dynamic-targeting.js
+18:46:31 [watch] src/data/cases/dynamic-targeting.js
+18:46:31 [watch] src/data/cases/dynamic-targeting.js
+18:46:31 [watch] src/data/cases/dynamic-targeting.js
+18:46:31 [200] /ai/dynamic-targeting 7ms
+18:46:41 [watch] src/data/cases/dynamic-targeting.js
+18:46:41 [watch] src/data/cases/dynamic-targeting.js
+18:46:41 [watch] src/data/cases/dynamic-targeting.js
+18:46:41 [watch] src/data/cases/dynamic-targeting.js
+18:46:41 [watch] src/data/cases/dynamic-targeting.js
+18:46:42 [watch] src/data/cases/dynamic-targeting.js
+18:46:42 [200] /ai/dynamic-targeting 7ms
+18:46:57 [watch] src/data/cases/dynamic-targeting.js
+18:46:57 [watch] src/data/cases/dynamic-targeting.js
+18:46:57 [watch] src/data/cases/dynamic-targeting.js
+18:46:57 [watch] src/data/cases/dynamic-targeting.js
+18:46:57 [watch] src/data/cases/dynamic-targeting.js
+18:46:57 [watch] src/data/cases/dynamic-targeting.js
+18:46:58 [200] /ai/dynamic-targeting 20ms
+18:47:53 [watch] src/data/cases/dynamic-targeting.js
+18:47:53 [watch] src/data/cases/dynamic-targeting.js
+18:47:53 [200] /ai/dynamic-targeting 7ms
+18:47:53 [watch] src/data/cases/dynamic-targeting.js
+18:47:53 [watch] src/data/cases/dynamic-targeting.js
+18:47:53 [watch] src/data/cases/dynamic-targeting.js
+18:47:53 [watch] src/data/cases/dynamic-targeting.js
+18:47:54 [watch] src/data/cases/dynamic-targeting.js
+18:47:54 [watch] src/data/cases/dynamic-targeting.js
+18:47:54 [watch] src/data/cases/dynamic-targeting.js
+18:47:55 [200] /ai/dynamic-targeting 2ms
+18:48:00 [watch] src/data/cases/dynamic-targeting.js
+18:48:00 [watch] src/data/cases/dynamic-targeting.js
+18:48:00 [watch] src/data/cases/dynamic-targeting.js
+18:48:00 [watch] src/data/cases/dynamic-targeting.js
+18:48:01 [watch] src/data/cases/dynamic-targeting.js
+18:48:01 [200] /ai/dynamic-targeting 5ms
+18:48:15 [watch] src/data/cases/dynamic-targeting.js
+18:48:15 [watch] src/data/cases/dynamic-targeting.js
+18:48:15 [watch] src/data/cases/dynamic-targeting.js
+18:48:15 [watch] src/data/cases/dynamic-targeting.js
+18:48:15 [watch] src/data/cases/dynamic-targeting.js
+18:48:16 [200] /ai/dynamic-targeting 12ms
+18:48:56 [watch] src/data/cases/dynamic-targeting.js
+18:48:56 [watch] src/data/cases/dynamic-targeting.js
+18:48:56 [watch] src/data/cases/dynamic-targeting.js
+18:48:57 [200] /ai/dynamic-targeting 12ms
+18:49:10 [watch] src/data/cases/dynamic-targeting.js
+18:49:10 [watch] src/data/cases/dynamic-targeting.js
+18:49:10 [watch] src/data/cases/dynamic-targeting.js
+18:49:11 [watch] src/data/cases/dynamic-targeting.js
+18:49:11 [watch] src/data/cases/dynamic-targeting.js
+18:49:11 [watch] src/data/cases/dynamic-targeting.js
+18:49:12 [200] /ai/dynamic-targeting 11ms
+18:49:13 [200] / 5ms
+18:49:15 [200] /ai/maintenance-copilot 4ms
+18:49:19 [200] / 5ms
+18:49:20 [200] /ai/next-best-action 4ms
+18:49:24 [200] / 10ms
+18:49:25 [200] /ai/kapture 5ms
+18:49:27 [200] / 4ms
+18:49:41 [200] /ai/dynamic-targeting 11ms
+18:50:39 [watch] src/data/cases/dynamic-targeting.js
+18:50:39 [watch] src/data/cases/dynamic-targeting.js
+18:50:39 [watch] src/data/cases/dynamic-targeting.js
+18:50:40 [200] /ai/dynamic-targeting 6ms
+18:50:46 [watch] src/data/cases/dynamic-targeting.js
+18:50:46 [watch] src/data/cases/dynamic-targeting.js
+18:50:46 [watch] src/data/cases/dynamic-targeting.js
+18:50:47 [200] /ai/dynamic-targeting 7ms
+18:50:56 [watch] src/data/cases/dynamic-targeting.js
+18:50:56 [watch] src/data/cases/dynamic-targeting.js
+18:50:56 [watch] src/data/cases/dynamic-targeting.js
+18:50:57 [200] /ai/dynamic-targeting 7ms
+18:51:18 [watch] src/data/cases/dynamic-targeting.js
+18:51:18 [watch] src/data/cases/dynamic-targeting.js
+18:51:18 [watch] src/data/cases/dynamic-targeting.js
+18:51:18 [watch] src/data/cases/dynamic-targeting.js
+18:51:18 [watch] src/data/cases/dynamic-targeting.js
+18:51:18 [watch] src/data/cases/dynamic-targeting.js
+18:51:19 [watch] src/data/cases/dynamic-targeting.js
+18:51:19 [watch] src/data/cases/dynamic-targeting.js
+18:51:20 [200] /ai/dynamic-targeting 8ms
+18:51:41 [watch] src/data/cases/dynamic-targeting.js
+18:51:41 [watch] src/data/cases/dynamic-targeting.js
+18:51:41 [watch] src/data/cases/dynamic-targeting.js
+18:51:41 [watch] src/data/cases/dynamic-targeting.js
+18:51:42 [watch] src/data/cases/dynamic-targeting.js
+18:51:42 [watch] src/data/cases/dynamic-targeting.js
+18:51:42 [watch] src/data/cases/dynamic-targeting.js
+18:51:42 [watch] src/data/cases/dynamic-targeting.js
+18:51:42 [watch] src/data/cases/dynamic-targeting.js
+18:51:42 [watch] src/data/cases/dynamic-targeting.js
+18:51:43 [200] /ai/dynamic-targeting 6ms
+18:51:45 [watch] src/data/cases/dynamic-targeting.js
+18:51:45 [watch] src/data/cases/dynamic-targeting.js
+18:51:45 [watch] src/data/cases/dynamic-targeting.js
+18:51:46 [watch] src/data/cases/dynamic-targeting.js
+18:51:46 [200] /ai/dynamic-targeting 3ms
+18:52:05 [watch] src/data/cases/dynamic-targeting.js
+18:52:05 [watch] src/data/cases/dynamic-targeting.js
+18:52:05 [watch] src/data/cases/dynamic-targeting.js
+18:52:05 [watch] src/data/cases/dynamic-targeting.js
+18:52:05 [watch] src/data/cases/dynamic-targeting.js
+18:52:06 [watch] src/data/cases/dynamic-targeting.js
+18:52:06 [200] /ai/dynamic-targeting 5ms
+18:52:10 [watch] src/data/cases/dynamic-targeting.js
+18:52:10 [watch] src/data/cases/dynamic-targeting.js
+18:52:11 [watch] src/data/cases/dynamic-targeting.js
+18:52:11 [watch] src/data/cases/dynamic-targeting.js
+18:52:11 [ERROR] Cannot read properties of undefined (reading 'slug')
+  Stack trace:
+    at eval (C:/Users/z0052tba/Deb-Portfolio/src/pages/ai/[slug].astro:19:26)
+    at Module.getStaticPaths (C:/Users/z0052tba/Deb-Portfolio/src/pages/ai/[slug].astro:18:43)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+18:52:29 [watch] src/data/cases/dynamic-targeting.js
+18:52:29 [watch] src/data/cases/dynamic-targeting.js
+18:52:30 [watch] src/data/cases/dynamic-targeting.js
+18:52:30 [watch] src/data/cases/dynamic-targeting.js
+18:52:30 [200] /ai/dynamic-targeting 8ms
+18:52:30 [watch] src/data/cases/dynamic-targeting.js
+18:52:30 [watch] src/data/cases/dynamic-targeting.js
+18:52:30 [watch] src/data/cases/dynamic-targeting.js
+18:52:30 [watch] src/data/cases/dynamic-targeting.js
+18:52:31 [watch] src/data/cases/dynamic-targeting.js
+18:52:31 [watch] src/data/cases/dynamic-targeting.js
+18:52:31 [200] /ai/dynamic-targeting 2ms
+18:53:18 [watch] src/data/cases/dynamic-targeting.js
+18:53:18 [watch] src/data/cases/dynamic-targeting.js
+18:53:19 [watch] src/data/cases/dynamic-targeting.js
+18:53:19 [200] /ai/dynamic-targeting 6ms
+18:53:19 [watch] src/data/cases/dynamic-targeting.js
+18:53:19 [watch] src/data/cases/dynamic-targeting.js
+18:53:40 [watch] src/data/cases/dynamic-targeting.js
+18:53:41 [watch] src/data/cases/dynamic-targeting.js
+18:53:41 [200] /ai/dynamic-targeting 5ms
+18:53:41 [watch] src/data/cases/dynamic-targeting.js
+18:53:41 [watch] src/data/cases/dynamic-targeting.js
+18:53:41 [watch] src/data/cases/dynamic-targeting.js
+18:53:41 [watch] src/data/cases/dynamic-targeting.js
+18:53:42 [200] /ai/dynamic-targeting 5ms
+18:53:53 [watch] src/data/cases/dynamic-targeting.js
+18:53:53 [watch] src/data/cases/dynamic-targeting.js
+18:53:54 [watch] src/data/cases/dynamic-targeting.js
+18:53:54 [200] /ai/dynamic-targeting 7ms
+18:53:54 [watch] src/data/cases/dynamic-targeting.js
+18:53:54 [watch] src/data/cases/dynamic-targeting.js
+18:53:54 [watch] src/data/cases/dynamic-targeting.js
+18:53:54 [watch] src/data/cases/dynamic-targeting.js
+18:53:54 [watch] src/data/cases/dynamic-targeting.js
+18:53:55 [200] /ai/dynamic-targeting 2ms
+18:54:25 [watch] src/data/cases/dynamic-targeting.js
+18:54:25 [200] /ai/dynamic-targeting 7ms
+18:54:25 [watch] src/data/cases/dynamic-targeting.js
+18:54:25 [watch] src/data/cases/dynamic-targeting.js
+18:54:25 [watch] src/data/cases/dynamic-targeting.js
+18:54:25 [watch] src/data/cases/dynamic-targeting.js
+18:54:25 [watch] src/data/cases/dynamic-targeting.js
+18:54:26 [watch] src/data/cases/dynamic-targeting.js
+18:54:26 [200] /ai/dynamic-targeting 2ms
+18:54:26 [watch] src/data/cases/dynamic-targeting.js
+18:54:26 [watch] src/data/cases/dynamic-targeting.js
+18:54:26 [watch] src/data/cases/dynamic-targeting.js
+18:54:36 [watch] src/data/cases/dynamic-targeting.js
+18:54:37 [watch] src/data/cases/dynamic-targeting.js
+18:54:37 [200] /ai/dynamic-targeting 7ms
+18:54:37 [watch] src/data/cases/dynamic-targeting.js
+18:54:55 [watch] src/data/cases/dynamic-targeting.js
+18:54:55 [200] /ai/dynamic-targeting 5ms
+18:54:55 [watch] src/data/cases/dynamic-targeting.js
+18:54:55 [watch] src/data/cases/dynamic-targeting.js
+18:54:55 [watch] src/data/cases/dynamic-targeting.js
+18:54:55 [watch] src/data/cases/dynamic-targeting.js
+18:54:55 [watch] src/data/cases/dynamic-targeting.js
+18:54:56 [watch] src/data/cases/dynamic-targeting.js
+18:54:56 [watch] src/data/cases/dynamic-targeting.js
+18:54:56 [watch] src/data/cases/dynamic-targeting.js
+18:54:56 [watch] src/data/cases/dynamic-targeting.js
+18:54:57 [200] /ai/dynamic-targeting 3ms
+18:54:57 [watch] src/data/cases/dynamic-targeting.js
+18:54:57 [watch] src/data/cases/dynamic-targeting.js
+18:54:57 [watch] src/data/cases/dynamic-targeting.js
+18:54:57 [watch] src/data/cases/dynamic-targeting.js
+18:54:57 [watch] src/data/cases/dynamic-targeting.js
+18:54:58 [200] /ai/dynamic-targeting 3ms
+18:55:43 [watch] src/data/cases/dynamic-targeting.js
+18:55:43 [watch] src/data/cases/dynamic-targeting.js
+18:55:43 [watch] src/data/cases/dynamic-targeting.js
+18:55:43 [watch] src/data/cases/dynamic-targeting.js
+18:55:43 [watch] src/data/cases/dynamic-targeting.js
+18:55:44 [ERROR] Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Stack trace:
+    at C:/Users/z0052tba/Deb-Portfolio/src/data/cases/dynamic-targeting.js:123:95
+    [...] See full stack trace in the browser, or rerun with --verbose.
+18:55:58 [watch] src/data/cases/dynamic-targeting.js
+18:55:58 [watch] src/data/cases/dynamic-targeting.js
+18:55:58 [watch] src/data/cases/dynamic-targeting.js
+18:55:59 [watch] src/data/cases/dynamic-targeting.js
+18:55:59 [200] /ai/dynamic-targeting 4ms
+18:56:24 [watch] src/data/cases/dynamic-targeting.js
+18:56:24 [watch] src/data/cases/dynamic-targeting.js
+18:56:24 [watch] src/data/cases/dynamic-targeting.js
+18:56:24 [watch] src/data/cases/dynamic-targeting.js
+18:56:25 [watch] src/data/cases/dynamic-targeting.js
+18:56:25 [200] /ai/dynamic-targeting 7ms
+18:56:34 [watch] src/data/cases/dynamic-targeting.js
+18:56:34 [watch] src/data/cases/dynamic-targeting.js
+18:56:35 [watch] src/data/cases/dynamic-targeting.js
+18:56:35 [watch] src/data/cases/dynamic-targeting.js
+18:56:36 [200] /ai/dynamic-targeting 8ms
+18:56:49 [watch] src/data/cases/dynamic-targeting.js
+18:56:50 [watch] src/data/cases/dynamic-targeting.js
+18:56:50 [watch] src/data/cases/dynamic-targeting.js
+18:56:50 [ERROR] Cannot read properties of undefined (reading 'slug')
+  Stack trace:
+    at eval (C:/Users/z0052tba/Deb-Portfolio/src/pages/ai/[slug].astro:19:26)
+    at Module.getStaticPaths (C:/Users/z0052tba/Deb-Portfolio/src/pages/ai/[slug].astro:18:43)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+18:56:50 [watch] src/data/cases/dynamic-targeting.js
+18:56:50 [watch] src/data/cases/dynamic-targeting.js
+18:57:11 [watch] src/data/cases/dynamic-targeting.js
+18:57:11 [watch] src/data/cases/dynamic-targeting.js
+18:57:11 [watch] src/data/cases/dynamic-targeting.js
+18:57:11 [watch] src/data/cases/dynamic-targeting.js
+18:57:12 [watch] src/data/cases/dynamic-targeting.js
+18:57:12 [watch] src/data/cases/dynamic-targeting.js
+18:57:12 [200] /ai/dynamic-targeting 7ms
+18:57:12 [watch] src/data/cases/dynamic-targeting.js
+18:57:12 [watch] src/data/cases/dynamic-targeting.js
+18:57:27 [watch] src/data/cases/dynamic-targeting.js
+18:57:28 [watch] src/data/cases/dynamic-targeting.js
+18:57:28 [watch] src/data/cases/dynamic-targeting.js
+18:57:28 [watch] src/data/cases/dynamic-targeting.js
+18:57:28 [200] /ai/dynamic-targeting 6ms
+18:57:28 [watch] src/data/cases/dynamic-targeting.js
+18:57:28 [watch] src/data/cases/dynamic-targeting.js
+18:58:25 [watch] src/data/cases/dynamic-targeting.js
+18:58:25 [watch] src/data/cases/dynamic-targeting.js
+18:58:25 [watch] src/data/cases/dynamic-targeting.js
+18:58:26 [200] /ai/dynamic-targeting 8ms
+19:03:23 [watch] src/data/cases/dynamic-targeting.js
+19:03:23 [watch] src/data/cases/dynamic-targeting.js
+19:03:24 [watch] src/data/cases/dynamic-targeting.js
+19:03:24 [watch] src/data/cases/dynamic-targeting.js
+19:03:24 [200] /ai/dynamic-targeting 6ms
+19:03:24 [watch] src/data/cases/dynamic-targeting.js
+19:03:24 [watch] src/data/cases/dynamic-targeting.js
+19:03:24 [watch] src/data/cases/dynamic-targeting.js
+19:03:25 [watch] src/data/cases/dynamic-targeting.js
+19:03:25 [watch] src/data/cases/dynamic-targeting.js
+19:03:26 [200] /ai/dynamic-targeting 3ms
+19:04:02 [watch] src/data/cases/dynamic-targeting.js
+19:04:02 [watch] src/data/cases/dynamic-targeting.js
+19:04:02 [watch] src/data/cases/dynamic-targeting.js
+19:04:02 [watch] src/data/cases/dynamic-targeting.js
+19:04:02 [watch] src/data/cases/dynamic-targeting.js
+19:04:03 [watch] src/data/cases/dynamic-targeting.js
+19:04:03 [200] /ai/dynamic-targeting 12ms
+19:04:28 [watch] src/data/cases/dynamic-targeting.js
+19:04:28 [watch] src/data/cases/dynamic-targeting.js
+19:04:28 [watch] src/data/cases/dynamic-targeting.js
+19:04:28 [watch] src/data/cases/dynamic-targeting.js
+19:04:29 [200] /ai/dynamic-targeting 7ms
+19:04:43 [200] / 13ms
+19:04:44 [200] /ai/maintenance-copilot 6ms
+19:05:29 [watch] src/data/cases/dynamic-targeting.js
+19:05:29 [watch] src/data/cases/dynamic-targeting.js
+19:05:29 [watch] src/data/cases/dynamic-targeting.js
+19:05:29 [watch] src/data/cases/dynamic-targeting.js
+19:05:30 [watch] src/data/cases/dynamic-targeting.js
+19:05:30 [watch] src/data/cases/dynamic-targeting.js
+19:05:30 [200] /ai/maintenance-copilot 7ms
+19:05:30 [watch] src/data/cases/dynamic-targeting.js
+19:05:30 [watch] src/data/cases/dynamic-targeting.js
+19:05:30 [watch] src/data/cases/dynamic-targeting.js
+19:05:31 [200] /ai/maintenance-copilot 4ms
+19:05:42 [200] / 12ms
+19:05:43 [200] /ai/dynamic-targeting 5ms
+19:37:25 [200] /ai/dynamic-targeting 31ms
+19:40:43 [watch] src/data/cases/dynamic-targeting.js
+19:40:44 [watch] src/data/cases/dynamic-targeting.js
+19:40:44 [watch] src/data/cases/dynamic-targeting.js
+19:40:44 [watch] src/data/cases/dynamic-targeting.js
+19:40:44 [watch] src/data/cases/dynamic-targeting.js
+19:40:44 [watch] src/data/cases/dynamic-targeting.js
+19:40:44 [watch] src/data/cases/dynamic-targeting.js
+19:40:44 [watch] src/data/cases/dynamic-targeting.js
+19:40:45 [200] /ai/dynamic-targeting 6ms
+19:41:14 [watch] src/data/cases/dynamic-targeting.js
+19:41:14 [watch] src/data/cases/dynamic-targeting.js
+19:41:14 [watch] src/data/cases/dynamic-targeting.js
+19:41:14 [ERROR] Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+  Stack trace:
+    at C:/Users/z0052tba/Deb-Portfolio/src/data/cases/dynamic-targeting.js:212:95
+    [...] See full stack trace in the browser, or rerun with --verbose.
+19:41:14 [watch] src/data/cases/dynamic-targeting.js
+19:41:15 [watch] src/data/cases/dynamic-targeting.js
+19:41:37 [watch] src/data/cases/dynamic-targeting.js
+19:41:37 [watch] src/data/cases/dynamic-targeting.js
+19:41:37 [watch] src/data/cases/dynamic-targeting.js
+19:41:38 [watch] src/data/cases/dynamic-targeting.js
+19:41:39 [200] /ai/dynamic-targeting 6ms
+19:42:13 [watch] src/data/cases/dynamic-targeting.js
+19:42:13 [watch] src/data/cases/dynamic-targeting.js
+19:42:13 [watch] src/data/cases/dynamic-targeting.js
+19:42:13 [watch] src/data/cases/dynamic-targeting.js
+19:42:13 [200] /ai/dynamic-targeting 6ms
+19:42:13 [watch] src/data/cases/dynamic-targeting.js
+19:42:14 [watch] src/data/cases/dynamic-targeting.js
+19:42:21 [watch] src/data/cases/dynamic-targeting.js
+19:42:21 [200] /ai/dynamic-targeting 4ms
+19:43:21 [watch] src/data/cases/dynamic-targeting.js
+19:43:22 [200] /ai/dynamic-targeting 8ms
+19:43:33 [watch] src/data/cases/dynamic-targeting.js
+19:43:33 [200] /ai/dynamic-targeting 11ms
+19:46:19 [200] / 12ms
+19:47:08 [200] /ai/dynamic-targeting/ 11ms

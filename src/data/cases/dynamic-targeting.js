@@ -5,145 +5,157 @@ export const dynamicTargeting = {
 
   metric: '4–10% incremental lift in brand sales · 50% greater field effectiveness · 10+ global organisations',
   problem: 'Commercial teams relied on static, quarterly HCP segmentation — missing high-potential prescribers and misdirecting rep effort.',
-  solution: 'AI-driven HCP target decisioning platform that scores and prioritises healthcare providers in real time using live commercial signals.',
+  solution: 'AI-powered HCP prioritization platform for life sciences commercial teams',
   metaDescription: 'Dynamic Targeting — AI product case study by Debajyoti Das. A model ensemble platform (LSTM, behavioural shift, patient prediction) that delivered 4–10% incremental brand sales lift across 10+ global life sciences organisations.',
 
-  businessContext: `Dynamic Targeting wasn't a research project. It was a commercial bet on a specific hypothesis: that pharma companies were leaving measurable revenue on the table because their targeting was too slow.
+  businessContext: `Life sciences commercial teams often operate in markets that change faster than their planning cycles.
 
-The business case was straightforward. A pharmaceutical company's primary commercial asset is its field force — and the field force's primary variable is who it calls on. Static segmentation built once a quarter from lagging prescription data meant reps were optimising against a market that no longer existed. High-potential prescribers were invisible. Low-potential accounts consumed cycles that should have gone elsewhere.
+Traditional targeting and segmentation processes are usually refreshed periodically. By the time those segments reach the field, important signals may have already shifted — prescribing behavior, access conditions, competitive activity, engagement patterns, or territory-level opportunity.
 
-The opportunity was to rebuild that targeting layer with AI — not to replace reps, but to sharpen the list they walked in with on Monday morning. The hypothesised outcome: more calls on the right accounts, fewer on the wrong ones, measurable lift in brand sales as a result.
+The opportunity was to help commercial teams act on changing market signals faster.
 
-Across 10+ global life sciences organisations, that hypothesis held. We saw 4–10% incremental lift in impactable brand sales and 50% greater effectiveness in field sales calls — not by adding headcount, but by pointing existing headcount at better targets.`,
+The goal was not to replace field judgment. It was to give reps and managers a more current, explainable starting point for planning — so commercial effort could be focused on the accounts most likely to matter.`,
 
-  userSegmentation: `Three users interact with the commercial targeting workflow: the commercial operations lead who designs the segmentation strategy, the territory manager who translates that strategy into district-level call plans, and the field medical representative who executes calls and feeds interaction data back into the system.
+  userSegmentation: `The targeting workflow involved three primary user groups:
 
-I focused the core product design on the territory manager and the field rep as the primary users — with commercial ops as the approver and buyer.
+1. Commercial operations leaders who define the targeting strategy and governance approach.
 
-Here's why: the commercial ops team sets the strategy once. The territory manager and field rep live inside it every week. If the targeting platform doesn't change their daily behaviour — which list they open, which account they prioritise, which call they make first — the strategy never reaches the market. Adoption at the field level is the only adoption that translates to sales outcomes.
+2. Territory managers who translate strategy into territory-level execution.
 
-The field rep's workflow was the adoption bottleneck. Every targeting product that failed before ours failed at this layer: the recommendation was good in aggregate but unused in the field because the rep had no reason to trust it over their own judgement.`,
+3. Field representatives who use the recommendations to plan calls and engage HCPs.
 
-  problemPrioritisation: `Pharma commercial teams face a compound problem: too much data, too slow to act on it, and no clear signal on who actually matters today.
+I focused heavily on the territory manager and field representative experience.
 
-Reps have access to prescription data, market share reports, call history, sample logs, and managed care coverage data. None of it tells them who to call Monday morning in a way they can trust. The planning cycle runs quarterly. The market runs daily. Everything in between is noise.
+Commercial operations may define the strategy, but field adoption determines whether that strategy reaches the market. If the recommendation does not change which account a rep prioritizes, which call they make first, or which opportunity they act on, the product does not create commercial impact.
 
-I prioritised three specific failure modes above the rest:
+The adoption challenge was clear: field teams would not use a recommendation simply because an algorithm produced it. They needed to understand why an account was being prioritized and how the recommendation related to what they were seeing in their territory.`,
 
-Emerging prescriber blindness. New high-potential prescribers — recently promoted physicians, newly affiliated specialists, doctors shifting therapeutic focus — are invisible in historical prescription data. Quarterly segmentation systematically misses them until they're already established and competitive.
+  problemPrioritisation: `The core user problem was not lack of data.
 
-Competitive displacement. When a competitor launches or gains formulary access, the prescribing behaviour of affected accounts shifts within weeks. Quarterly segmentation doesn't catch this until the next planning cycle, by which point the accounts have already moved.
+Commercial teams already had access to large volumes of information across performance, engagement, access, and market activity. The problem was that this information was fragmented, delayed, and difficult to translate into weekly field action.
 
-Rep time misallocation. Reps were spending 20–30% of their call time on accounts the data classified as medium or low priority — not because they disagreed with the segmentation, but because their call plans were built from the same stale data and they had nothing better to go on.
+I focused on three recurring failure modes.
+
+1. Emerging opportunity detection: New or changing HCP opportunities were often difficult to detect through static segmentation alone. A provider’s potential could change before it became obvious in traditional planning outputs. The product needed to help surface emerging opportunities earlier.
+
+2. Market shift response: Competitive, payer, access, or engagement conditions could shift faster than the planning cycle. Field teams needed a way to react to meaningful changes while they were still commercially relevant. The product needed to shorten the gap between signal and action.
+
+3. Field time allocation: Reps had limited time and had to make prioritization decisions every week. Without a clear, trusted recommendation, call planning relied heavily on habit, local judgment, or outdated priorities. The product needed to make the next best focus area easier to identify and easier to trust.
 
 These three failure modes shared a common root: latency between signal and action. That was the problem worth solving first.`,
 
-  whyAI: `Before committing to an AI-driven approach, I tested the simpler alternatives.
+  whyAI: `Before positioning this as an AI product challenge, I evaluated whether simpler approaches could solve the problem.
 
-Could better reporting solve this? No. Richer dashboards give commercial ops more to look at — they don't give field reps a clearer answer on who to call. The problem isn't visibility at the executive level. It's decisioning at the field level.
+Could better reporting solve this? No. Dashboards could make more information visible, but they did not necessarily help a rep decide who to prioritize on Monday morning. The issue was not executive visibility. It was field-level decision support.
 
-Could an improved segmentation model solve this? Partially. A better quarterly batch model would produce more accurate segments — but it would still be quarterly. The latency problem survives a better model if the model still only runs every 90 days.
+Could an improved segmentation model solve this? Partially. Improving the existing segmentation model could make periodic targeting more accurate, but it would not fully solve the latency problem. If the market changes between planning cycles, even a better static model can still be late.
 
-Could CRM rules-based prioritisation solve this? No. Rules require someone to define them, maintain them, and update them when market conditions shift. In an environment where competitive dynamics, formulary changes, and prescriber behaviour evolve continuously, a rules engine is the wrong architecture.
+Could CRM rules-based prioritisation solve this? No. Rules can work when decision logic is stable and known in advance. But life sciences commercial prioritization depends on multiple changing signals, local context, and evolving market conditions. A rules-based system would require continuous manual tuning and would struggle to adapt as the signal patterns changed.
 
-AI was justified for two reasons. First, the signal space was too large and too dynamic for human-defined rules: we were processing prescription claims, CRM interaction history, HCP demographics, payer and managed care data, sales history, digital engagement signals, specialty and affiliation data, and regional market dynamics simultaneously — and their relative importance varied by brand, geography, and competitive context. No rules engine can hold that complexity and stay current.
+AI was justified for two reasons. The product needed to combine multiple signals, detect meaningful changes, and translate them into a ranked, explainable recommendation.
 
-Second, the outcome we needed — a ranked, current list of who to call — required continuous, multi-dimensional inference. Prescribing behaviour is a time series problem. Behavioural shift is a change-detection problem. Patient population movement is a forecasting problem. These are structurally different questions that demand structurally different models. A single model averaging across all of them produces answers that are mediocre on all dimensions. An ensemble of specialised models, each answering one question well and contributing its signal to a shared priority score, produces answers that are credible on every dimension.
-
-That architectural decision — to build a model ensemble rather than a single scoring model — is what made the platform extensible. New signal types and new model modules could be added as clinical evidence or commercial context evolved, without rebuilding the platform from scratch.`,
+AI was justified because the value was not just in analyzing historical data. The value was in helping users act on changing opportunity patterns while those patterns were still relevant.`,
 
   solutionDesign: {
-    overview: `Dynamic Targeting is a commercial decisioning platform built on a model ensemble architecture. Rather than producing a single targeting score from a single model, it runs a coordinated set of specialised AI models — each answering a distinct clinical or commercial question — and synthesises their outputs into a unified HCP opportunity score with a plain-language rationale.
+    overview: `Dynamic Targeting was designed as a commercial decision-support product, not just an analytics output.
 
-The design principle was to make the right call list obvious and trustworthy at the rep level, while giving commercial ops the controls and transparency they needed to govern it. Four design decisions shaped the platform.`,
+The product direction was built around five principles.`,
     steps: [
       {
-        title: 'An ensemble of specialised models, not a single scoring model',
-        detail: `The core architectural decision was to decompose the targeting question into its constituent sub-problems and build a dedicated model for each. Prescribing Trends uses LSTM networks to model individual HCP prescribing behaviour as a time series — capturing trajectory, acceleration, and seasonality that aggregate volume figures miss. Behavioural Shift detects statistically significant changes in an HCP's prescribing pattern, including competitive displacement and brand switching. Patient Count Prediction forecasts the addressable patient population in an HCP's practice using demographic, claims, and payer data. Additional modules — including payer access scoring, engagement propensity, and affiliation network effects — contribute further signal.
-
-Each model runs independently on its relevant data inputs. An ensemble layer aggregates their outputs into a single composite opportunity score per HCP, with each model's contribution weighted by its predictive validity for that brand and market context. The architecture is additive: new models can be plugged in as new data sources or clinical evidence become relevant, without rebuilding the scoring layer.`,
+        title: 'Refreshed prioritization over static targeting',
+        detail: `The product shifted the user experience from periodic target lists to refreshed account priorities.
+The intent was to help commercial teams respond faster when opportunity signals changed.`,
       },
       {
-        title: 'Deep learning for temporal patterns, not just cross-sectional scoring',
-        detail: `Prescribing behaviour is fundamentally a temporal problem — what matters is not where an HCP is today, but where they are going. A physician writing 10 scripts a month and declining is a different opportunity than one writing 10 scripts a month and accelerating from five.
-
-We used Recurrent Neural Networks and LSTM architectures for models where temporal dynamics matter — primarily the Prescribing Trends and Behavioural Shift modules. These architectures learn sequential dependencies in prescribing history that gradient-boosted models trained on snapshots cannot capture. For models where temporal ordering is less important — patient count prediction, payer access — gradient-boosted trees with engineered features remain more interpretable and perform comparably.`,
+        title: 'Explainable recommendations over black-box scores',
+        detail: `A rep should not see only a rank or score. They should understand the reason behind the recommendation.
+The product experience needed to answer: “Why is this HCP being prioritized now?” This was critical for trust, adoption, and field behavior change.`,
       },
       {
-        title: 'Explainable scores as a trust mechanism',
-        detail: `Every HCP priority score surfaces the top three signals driving it — not from the ensemble as a black box, but from the contributing models. A rep seeing Dr. Patel at the top of their list doesn't just see a number; they see which model module elevated that account and why: "Prescribing Trends: accelerating Rx trajectory over 8 weeks. Payer Access: formulary coverage improved this month. Behavioural Shift: no competitive displacement signal detected."
-
-This level of attribution was non-negotiable from the first field validation. Experienced reps challenge recommendations they don't understand — and they should. Explainability was the feature that converted sceptics into daily users.`,
+        title: 'Workflow-native delivery',
+        detail: `Recommendations had to appear where users already planned and executed their work. If field teams had to leave their existing workflow to check a separate analytics tool, adoption would suffer. The recommendation needed to be visible at the moment of planning and action.`,
       },
       {
-        title: 'CRM-native delivery with override-as-signal',
-        detail: `Targeting recommendations surface directly inside the rep's CRM — pre-populating the call plan with prioritised accounts. Reps can accept, deprioritise, or override any recommendation. Overrides are not discarded; they feed back into the ensemble as supervised correction signals. A rep who overrides an account because they know something the model doesn't is improving future recommendations for their entire territory. The feedback loop is the compounding mechanism that makes the platform more valuable the more it is used.`,
+        title: 'Human judgment as feedback',
+        detail: `Field users needed the ability to accept, defer, or override recommendations. An override was not treated as failure. It was a signal that the product could learn from — either because the user had local context the system did not capture, or because the recommendation needed recalibration.`,
+      },
+      {
+        title: 'Governance for commercial teams',
+        detail: `Commercial operations needed transparency and control. The product had to support business guardrails, strategic priorities, and governance expectations while still giving field teams more timely recommendations.`,
       },
     ],
   },
 
   keyDecisions: [
     {
-      decision: 'Dynamic scoring over periodic batch segmentation',
-      rationale: `The instinct was to improve the existing quarterly segmentation process — make the batch better, run it monthly instead of quarterly. Discovery showed the real problem was architectural, not methodological: the batch model was inherently reactive. By the time a segment update shipped, the signals that drove it were weeks old and the commercial window had often already closed.
-
-We rebuilt the scoring layer to run continuously on incoming signals. The result was a live priority score that reflected the market as it was, not as it had been. For high-velocity targeting scenarios — competitive launches, formulary changes, emerging prescribers — this was the difference between acting and reacting.`,
+      decision: 'Refreshed priorities instead of better static lists',
+      rationale: `One early product decision was to avoid simply making the existing targeting process more sophisticated.
+The deeper issue was not only accuracy. It was timeliness.
+If the recommendation arrived too late, the commercial opportunity could already have moved. The product therefore focused on helping users work from refreshed priorities rather than relying entirely on static planning outputs.`,
     },
     {
-      decision: 'Explainable scores as a go-to-market requirement',
-      rationale: `Pharma field reps are trained professionals with years of territory knowledge. They challenge recommendations they don't understand — and they should. A black-box score that says "call Dr. Smith" gets overridden by a rep who knows Dr. Smith switched to a competitor six months ago and no one updated the data.
+      decision: 'Explainability as an adoption requirement',
+      rationale: `Explainability was not treated as a compliance checkbox or a UX enhancement.
+It was central to adoption.
+Field representatives often have years of territory knowledge. If the system recommends an account without a clear rationale, users will either ignore it or apply their own judgment without feedback.
+The product therefore needed to show the key reasons behind a recommendation in plain language.
+The principle was simple:
 
-We invested in explainability before we had a production model. Every HCP score surfaces the top three signals driving it, in plain language, in the CRM. Reps who understood the score trusted it. Trust drove adoption. Adoption produced the outcome data that fed model improvement. Explainability wasn't a UX nicety — it was the feedback loop that made the model better over time.`,
+A recommendation that cannot be understood is unlikely to be used.`,
     },
     {
-      decision: 'Model ensemble over single-model scoring',
-      rationale: `The first architecture proposal was a single gradient-boosted model trained on all available signals simultaneously. It produced a reasonable offline accuracy score. It also produced a black box: no one could explain why a specific HCP ranked where they did, because the model was averaging across prescribing trends, payer dynamics, patient population, and engagement signals all at once.
-
-We decomposed the problem. Each sub-question got its own model, built for that question's structure: LSTM networks for temporal prescribing sequences, change-detection for behavioural shift, regression models for patient count forecasting. The ensemble layer then combined their outputs with calibrated weights.
-
-The result was a more accurate composite score — and a fully explainable one. Because each module answered a discrete question, attribution was clean: the top-three signals in the rep's CRM came from identifiable model outputs, not from an opaque feature importance vector. This architecture also made the platform extensible: adding a new signal type meant adding a new module, not retraining the entire model.`,
+      decision: 'Workflow integration over standalone analytics',
+      rationale: `A standalone dashboard may be useful for analysis, but it does not always change field behavior.
+The product was designed to bring recommendations into the user’s planning workflow, so account prioritization could influence real decisions — not just inform retrospective review.
+This made the product less about “insight consumption” and more about “decision support.”`,
+    },
+    {
+      decision: 'Feedback loop over one-way recommendation',
+      rationale: `The product experience allowed field users to respond to recommendations.
+If a rep accepted, delayed, or overrode a suggestion, that action became useful feedback. It helped identify where the recommendation aligned with field reality and where local context needed to be considered.
+This was important because the best enterprise AI products are not one-way prediction systems. They improve through repeated interaction with users.`,
     },
   ],
 
   risks: [
     {
-      risk: 'Data quality variance across markets',
-      mitigation: 'Built a data readiness score into the onboarding flow. Markets with thin claims coverage or incomplete CRM history are surfaced before go-live, with a clear path to improving data completeness. The model also adjusts confidence weighting based on signal coverage — lower confidence outputs are flagged rather than presented as high-certainty rankings.',
+      risk: 'Data quality variance',
+      mitigation: 'Different markets and teams may have different levels of data completeness. The product needed to account for this by making confidence, readiness, and limitations visible where relevant. A recommendation should not appear more certain than the underlying signal quality supports.',
     },
     {
-      risk: 'Rep override undermining model signal',
-      mitigation: 'Overrides are treated as signal, not noise. Every rep override is logged with context and fed back into the model as a supervised correction. Systematic overrides on specific account types or geographies trigger a model review — they often surface a real data quality issue or a market dynamic the model hasn\'t seen before.',
+      risk: 'Rep trust and adoption',
+      mitigation: 'The biggest product risk was not whether a recommendation could be generated. It was whether a field user would trust and use it. To mitigate this, the experience focused on plain-language rationale, workflow-native delivery, and user control. The goal was to make the recommendation feel like a useful planning assistant, not a command from a black box.',
     },
     {
-      risk: 'Compliance and promotional materials governance',
-      mitigation: 'Dynamic Targeting surfaces who to call — it does not generate promotional content. The separation between targeting intelligence and promotional execution was deliberate and documented. Medical, legal, and regulatory review was scoped to the output layer only, not to the targeting model, which kept the compliance surface area manageable.',
+      risk: 'Commercial governance',
+      mitigation: 'Commercial operations needed confidence that AI-driven prioritization would operate within business strategy, not outside it. The product therefore had to support governance, configuration, and visibility into how recommendations were being used. AI should assist commercial execution. It should not remove strategic control from the business.',
     },
     {
-      risk: 'Commercial ops loss of control over segmentation strategy',
-      mitigation: 'Commercial ops retains control of model weights, signal priorities, and territory constraints. A strategy configuration layer sits above the scoring model — commercial ops can specify that certain account types or geographies receive minimum frequency floors regardless of score. The AI optimises within the guardrails; it doesn\'t replace the strategy.',
+      risk: 'Compliance boundaries',
+      mitigation: 'In a regulated commercial environment, the product needed clear boundaries. The product focused on prioritization and planning support. It did not generate promotional claims or replace approved commercial processes. Keeping the scope clear helped reduce compliance ambiguity and made the product easier to explain to stakeholders.',
     },
   ],
 
   metrics: {
     business: [
-      { metric: 'Incremental lift in impactable brand sales vs static segmentation baseline', observed: '4–10%' },
-      { metric: 'Organisations deployed globally',                                           observed: '10+' },
-      { metric: 'Reduction in commercial operations planning time',                          observed: '↓ 40%' },
+      'Improvement in field focus on higher-priority accounts',
+      'Faster response to changing market signals',
+      'Increased effectiveness of account planning',
     ],
     product: [
-      { metric: 'Field rep daily active usage of priority call list',                        observed: null },
-      { metric: 'Override rate (rep rejects AI-recommended account)',                        observed: null },
-      { metric: 'Emerging prescriber identification rate vs quarterly baseline',             observed: null },
+      'Field rep daily active usage of priority call list',
+      'Override rate (rep rejects AI-recommended account)',
+      'Emerging prescriber identification rate vs quarterly baseline',
     ],
     ai: [
-      { metric: 'Greater effectiveness in field sales calls vs control cohort',              observed: '↑ 50%' },
-      { metric: 'Score freshness — time from signal ingestion to rep-visible priority update', observed: null },
-      { metric: 'Explainability coverage — % of scores with top-3 signal attribution',      observed: null },
-      { metric: 'Model prediction accuracy vs held-out Rx outcomes',                         observed: null },
+      'Greater effectiveness in field sales calls vs control cohort',
+      'Score freshness — time from signal ingestion to rep-visible priority update',
+      'Explainability coverage — % of scores with top-3 signal attribution',
+      'Model prediction accuracy vs held-out Rx outcomes',
     ],
   },
 
-  architecture: {
+  /*architecture: {
     overview: `Dynamic Targeting is built on a model ensemble architecture running on a continuous scoring pipeline. Where traditional segmentation runs a single batch model on a quarterly schedule, Dynamic Targeting runs a coordinated set of specialised AI models on a signal cadence — each consuming the data inputs most relevant to its question, producing a sub-score, and contributing to a composite HCP opportunity score that is updated as new data arrives.`,
     layers: [
       {
@@ -168,7 +180,7 @@ The result was a more accurate composite score — and a fully explainable one. 
       },
     ],
     stackImage: '/dynamic-targeting-architecture.svg',
-  },
+  },*/
 
   impact: [
     '4–10% incremental lift in impactable brand sales vs static segmentation baseline',
@@ -197,8 +209,10 @@ The result was a more accurate composite score — and a fully explainable one. 
   ],
 
   responsibilities: [
-    'Built at ZS Associates as part of the commercial AI and analytics practice. Responsibilities spanned AI product strategy, customer discovery across 10+ global pharma clients, model prioritisation, CRM integration design, and go-to-market for the life sciences commercial intelligence portfolio.',
+    'Built while working at ZS as part of the life sciences commercial intelligence portfolio. My responsibilities spanned product strategy, customer discovery, problem definition, workflow design, requirements development, explainability design, stakeholder alignment, and go-to-market support. I worked across business, design, data science, engineering, and commercial stakeholders to translate a complex AI capability into a usable field product. This case study is intentionally written at a high level and excludes client names, proprietary architecture, implementation details, data pipelines, model design, internal roadmap information, and confidential commercial metrics.',
   ],
 
-  technologies: ['LSTM / RNN', 'Gradient Boosting', 'Model Ensemble', 'SHAP Explainability', 'Behavioural Change Detection', 'Real-time Scoring Pipelines', 'Veeva CRM', 'Rx Claims Data', 'Payer Analytics', 'Feature Engineering'],
+  technologies: ['AI-powered prioritization', 'Commercial decision support', 'HCP targeting', 'Explainable recommendations', 'Human-in-the-loop feedback', 'CRM workflow integration', 'Field planning', 'Life sciences commercial analytics', 'Signal-driven account prioritization'],
+
+  disclaimer: `This case study is intentionally written at a high level. It excludes client names, proprietary architecture, implementation details, data pipelines, model design, internal roadmap information, and confidential commercial metrics.`,
 };
