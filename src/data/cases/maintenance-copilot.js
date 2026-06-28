@@ -130,26 +130,26 @@ This feedback was important for two reasons: it helped improve quality over time
 
   metrics: {
     business: [
-      { metric: 'Improved maintenance efficiency',             observed: null },
-      { metric: 'Reduced downtime-related friction',           observed: null },
-      { metric: 'Better technician productivity',              observed: null },
-      { metric: 'Stronger platform value perception',          observed: null },
-      { metric: 'Improved retention or expansion signals',     observed: null },
+      'Improved maintenance efficiency',
+      'Reduced downtime-related friction',
+      'Better technician productivity',
+      'Stronger platform value perception',
+      'Improved retention or expansion signals',
     ],
     product: [
-      { metric: 'Usage within troubleshooting workflows',                   observed: null },
-      { metric: 'Repeat usage by technicians',                              observed: null },
-      { metric: 'Reduction in time spent searching for information',        observed: null },
-      { metric: 'Usage during complex work orders',                         observed: null },
-      { metric: 'Qualitative feedback from users',                          observed: null },
+      'Usage within troubleshooting workflows',
+      'Repeat usage by technicians',
+      'Reduction in time spent searching for information',
+      'Usage during complex work orders',
+      'Qualitative feedback from users',
     ],
     ai: [
-      { metric: 'Answer usefulness',              observed: null },
-      { metric: 'Source relevance',               observed: null },
-      { metric: 'Correction or rejection rates',  observed: null },
-      { metric: 'User feedback signals',          observed: null },
-      { metric: 'Escalation behaviour',           observed: null },
-      { metric: 'Response latency',               observed: null },
+      'Answer usefulness',
+      'Source relevance',
+      'Correction or rejection rates',
+      'User feedback signals',
+      'Escalation behaviour',
+      'Response latency',
     ],
   },
 
@@ -196,4 +196,6 @@ The work required balancing three perspectives: user value (would this actually 
     'Business Outcome Framing',
     'Cross-Functional Leadership',
   ],
+
+  disclaimer: `This case study is a generalized reflection on product strategy and AI design patterns in enterprise asset maintenance. It does not disclose confidential company information, proprietary architecture, customer data, internal roadmap details, implementation specifics, or non-public business metrics.`,
 };

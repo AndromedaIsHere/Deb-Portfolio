@@ -23,9 +23,9 @@ const tocItems = [
   { id: 'user-segmentation',       label: 'The user I focused on — and why',       show: !!item.userSegmentation },
   { id: 'problem-prioritisation',  label: 'The problem worth solving first',  show: !!item.problemPrioritisation },
   { id: 'why-ai',                  label: 'Why AI — and why not something simpler',                 show: !!item.whyAI },
-  { id: 'solution-design',        label: 'Solution design',         show: !!item.solutionDesign },
-  { id: 'key-decisions',           label: 'Key decisions',           show: !!item.keyDecisions },
-  { id: 'technical-architecture',  label: 'Technical architecture',  show: !!item.architecture },
+  { id: 'solution-design',        label: 'Product direction',         show: !!item.solutionDesign },
+  { id: 'key-decisions',           label: 'Key design decisions',           show: !!item.keyDecisions },
+  //{ id: 'technical-architecture',  label: 'Technical architecture',  show: !!item.architecture },
   { id: 'risks',                   label: 'Risks & mitigations',     show: !!item.risks },
   //{ id: 'outcome',                 label: 'Outcome',                 show: true },
   { id: 'metrics',                 label: 'How I\'d measure success', show: !!item.metrics },
@@ -131,7 +131,7 @@ const tocItems = [
 
         {item.solutionDesign && (
           <div class="cs-section" id="solution-design">
-            <h2>Solution design</h2>
+            <h2>Product direction</h2>
             {item.solutionDesign.overview && (
               <p>{item.solutionDesign.overview}</p>
             )}
@@ -146,7 +146,7 @@ const tocItems = [
 
         {item.keyDecisions && (
           <div class="cs-section" id="key-decisions">
-            <h2>The Solution</h2>
+            <h2>Key design decisions</h2>
             {item.keyDecisions.map((d) => (
               <div class="cs-decision">
                 <p><strong>{d.decision}</strong></p>
@@ -203,10 +203,6 @@ const tocItems = [
           <div class="cs-section" id="metrics">
             <h2>How I'd measure success</h2>
             <div class="cs-metrics">
-              <div class="cs-metrics-header">
-                <span>Metric</span>
-                <span>Observed</span>
-              </div>
               {[
                 { label: 'Business',    items: item.metrics.business },
                 { label: 'Product',     items: item.metrics.product },
@@ -214,18 +210,18 @@ const tocItems = [
               ].map(({ label, items }) => (
                 <div class="cs-metrics-group">
                   <p class="cs-metrics-label">{label}</p>
-                  {items.map((m) => {
-                    const text    = typeof m === 'string' ? m : m.metric;
-                    const observed = typeof m === 'string' ? null : m.observed;
-                    return (
-                      <div class="cs-metrics-row">
-                        <span class="cs-metrics-text">{text}</span>
-                        <span class={`cs-metrics-observed${observed ? '' : ' cs-metrics-observed--empty'}`}>
-                          {observed ?? '—'}
-                        </span>
-                      </div>
-                    );
-                  })}
+                  <ul class="cs-metrics-list">
+                    {items.map((m) => {
+                      const text     = typeof m === 'string' ? m : m.metric;
+                      const observed = typeof m === 'string' ? null : m.observed;
+                      return (
+                        <li class="cs-metrics-item">
+                          <span class="cs-metrics-text">{text}</span>
+                          {observed && <span class="cs-metrics-observed">{observed}</span>}
+                        </li>
+                      );
+                    })}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -257,6 +253,13 @@ const tocItems = [
                 <span class="case-study-tag">{tag}</span>
               ))}
             </div>
+          </div>
+        )}
+
+        {item.disclaimer && (
+          <div class="cs-section cs-disclaimer" id="disclaimer">
+            <p><strong>Disclaimer</strong></p>
+            <p>{item.disclaimer}</p>
           </div>
         )}
 
