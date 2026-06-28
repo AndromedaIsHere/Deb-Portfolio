@@ -1,7 +1,7 @@
 export const kapture = {
   slug: 'kapture',
   title: 'Kapture',
-  domain: 'Banking · Insurance · Mortgage',
+  domain: 'Financial Services · Logistics',
 
   metric: 'Intelligent Document Processing platform for enterprise document extraction',
   problem: 'Enterprises processing high volumes of documents faced long turnaround times, high manual effort, inconsistent data quality, and delayed business decisions.',
