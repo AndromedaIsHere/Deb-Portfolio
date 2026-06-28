@@ -1,0 +1,16 @@
+
+> deb-portfolio@0.1.0 dev
+> astro dev
+
+10:53:39 [types] Generated 12ms
+10:53:40 [vite] Port 4321 is in use, trying another one...
+
+ astro  v4.16.19 ready in 771 ms
+
+┃ Local    http://localhost:4322/
+┃ Network  use --host to expose
+
+10:53:40 watching for file changes...
+11:06:10 [200] /ai/maintenance-copilot/ 31ms
+11:06:51 [200] /ai/maintenance-copilot/ 7ms
+11:07:06 [200] /ai/maintenance-copilot/ 6ms

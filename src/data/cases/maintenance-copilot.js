@@ -3,176 +3,197 @@ export const maintenanceCopilot = {
   title: 'Maintenance Copilot',
   domain: 'Enterprise Asset Management',
 
-  metric: '67% reduction in troubleshooting time',
-  problem: 'Technicians spent excessive time troubleshooting maintenance issues and searching documentation.',
-  solution: 'LLM-powered conversational assistant embedded directly into maintenance workflows.',
-  metaDescription: 'Maintenance Copilot — AI product case study by Debajyoti Das. How a RAG-powered conversational assistant embedded in a CMMS reduced technician troubleshooting time by 67% and became the #1 reason for contract renewal.',
+  metric: 'Reduced troubleshooting friction in the field',
+  problem: 'Technicians lacked context at the moment of execution — information existed but was fragmented, inaccessible, and never available in the right form when needed.',
+  solution: 'Designing an AI assistant to help maintenance teams troubleshoot faster, work with more confidence, and reduce information friction in the field.',
+  metaDescription: 'Maintenance Copilot — AI product case study by Debajyoti Das. How an AI assistant embedded in maintenance workflows reduced troubleshooting friction and helped technicians resolve issues faster, with more confidence.',
 
-  businessContext: `Before I wrote a single product spec, I made sure I understood what the business needed — not just what users wanted.
+  businessContext: `Enterprise maintenance platforms create value when they help customers improve uptime, reduce operational waste, and make maintenance execution more consistent.
 
-Customers were churning from our CMMS platform citing one consistent reason: they weren't getting enough value. In a market where competitors were closing the feature gap fast, we needed a wedge — something that deepened engagement, created measurable ROI, and justified a premium tier. Maintenance Copilot was that wedge.
+But many platforms still leave a major gap at the point of execution. Planning, scheduling, and reporting may be digitized, yet technicians often still rely on fragmented documentation, tribal knowledge, manual search, or escalation to experienced colleagues when solving complex issues.
 
-The primary objective was retention and expansion. That single framing shaped every prioritisation call that followed. Features that made existing customers stickier took precedence over features that attracted new ones. AI wasn't a technology bet — it was a business bet with a clear hypothesis: if we could make technicians meaningfully faster and more effective, customers would renew, expand, and tell others.`,
+The opportunity was to increase the value of the maintenance workflow by helping technicians act with better context at the moment they needed it most.
 
-  userSegmentation: `Three users interact with maintenance workflows: the facility director who cares about uptime and cost, the maintenance manager who cares about scheduling and utilisation, and the field technician who just needs to fix the asset in front of them — quickly, safely, and without hunting across six different systems for information.
+The product hypothesis was simple: if we reduce the time and effort required to find trustworthy maintenance guidance, technicians can resolve issues faster, teams can operate more consistently, and customers can see clearer value from the platform.
 
-I focused on the field technician as the primary target user.
+This framing mattered because it connected the AI feature directly to business outcomes — adoption, retention, operational efficiency, and customer value — rather than treating AI as a novelty layer.`,
 
-Here's why: technicians are the execution layer of every maintenance operation. Their decisions — what to check first, which part to replace, when to escalate — directly determine first-time fix rates, asset uptime, and downstream cost. Yet most CMMS tools are designed for managers, not for the person in the field. Technicians carry the highest information friction and receive the least product investment. That gap was exactly where AI could deliver outsized value — and where the facility director would see the impact in the data.`,
+  userSegmentation: `Maintenance workflows involve several stakeholders. Facility leaders care about uptime, cost, risk, and operational performance. Maintenance managers care about backlog, scheduling, utilisation, and team productivity. Technicians care about resolving the issue safely, quickly, and correctly.
 
-  problemPrioritisation: `Technicians face a cluster of real problems: unclear fault codes, scattered documentation, inconsistent training across experience levels, slow parts lookup, and the burden of documenting completed work accurately. All of them matter. But I prioritised troubleshooting time — the information gap in the middle of a repair — above everything else.
+I focused on the field technician as the primary user. That was a deliberate product decision.
 
-Three reasons drove that decision:
+Technicians are the execution layer of maintenance operations. Their decisions directly affect first-time fix rates, downtime, escalation volume, and work quality. Yet many enterprise maintenance tools are designed more for managers and administrators than for the person standing in front of the asset.
 
-Frequency. It happens on every complex work order. Not occasionally — on every job where the fault isn't immediately obvious, which is most of them.
+For technicians, the core challenge is not always lack of effort or skill. It is lack of context at the right moment.
 
-Urgency. A technician standing in front of a failed HVAC unit at 2 AM can't wait for a senior engineer to call back. The pain is acute, time-pressured, and entirely avoidable with the right information available at the right moment.
+They may need to answer questions like: What does this fault or symptom mean? Has this asset had a similar issue before? Which procedure or manual section is relevant? What should I check first? When should I escalate? How should I document what I did?
 
-Business impact. Every additional hour of downtime has a direct, calculable cost for the customer. Reducing troubleshooting time is one of the few product improvements that shows up immediately in an operational dashboard — which means the facility director notices, and the renewal conversation changes.
+This is exactly where AI had potential — not to replace technician judgment, but to reduce the friction around finding and using relevant information.`,
 
-It was also the problem where AI had the clearest, most defensible advantage over every simpler alternative.`,
+  problemPrioritisation: `The problem I prioritised was troubleshooting friction.
 
-  whyAI: `I don't treat AI as the default answer. Before committing to an LLM-powered approach, I pressure-tested every simpler alternative.
+In maintenance environments, information is often scattered across asset documentation, OEM manuals, SOPs, fault code references, historical work records, escalation notes, and the experience of senior technicians. The information may exist, but it is rarely available in a simple, contextual, easy-to-use form when the technician needs it.
 
-Could rules solve this? No. Fault codes vary by asset type, OEM, age, and installation environment. A rules engine breaks the moment it encounters an asset configuration it wasn't explicitly programmed for — and in a large facility, that's constantly.
+That creates three practical problems.
 
-Could better search solve this? Partially. But search requires the technician to know what to search for. A technician describing what they're seeing — "grinding noise, not reaching setpoint" — doesn't know the correct technical terminology to query. Search puts the cognitive burden back on the user.
+First, troubleshooting takes longer than necessary. Technicians spend valuable time searching, interpreting, asking, and validating before they can act.
 
-Could standard automation handle it? No. The problem is unstructured knowledge retrieval across heterogeneous documents that need to be synthesised into a contextual, actionable answer in real time. That's not an automation problem.
+Second, work quality becomes inconsistent. Two technicians may approach the same issue differently depending on experience, familiarity with the asset, or access to prior knowledge.
 
-AI was justified because the task required three capabilities that no simpler tool could provide: natural language understanding of symptom descriptions, synthesis across multiple knowledge sources simultaneously, and generation of context-aware guidance that adapts to the specific asset, fault history, and work order. The LLM wasn't chosen because it was fashionable. It was chosen because it was the only tool that fit the problem.`,
+Third, documentation quality suffers. When technicians are under time pressure, the final work notes may be incomplete, inconsistent, or difficult to reuse later.
+
+The product opportunity was to reduce this information burden without disrupting the technician's workflow.`,
+
+  whyAI: `I did not start with the assumption that AI was the answer. Before shaping the product direction, I pressure-tested simpler alternatives.
+
+Could rules solve it? Rules work well when scenarios are predictable and decision paths are stable. But troubleshooting is variable. Symptoms can be incomplete, asset configurations differ, historical context matters, and the same issue may present differently depending on usage, environment, and maintenance history. A rules-based system would either become too rigid or too expensive to maintain.
+
+Could better search solve it? Search helps, but it assumes the technician knows what to ask. In practice, technicians often describe what they observe in natural language: a sound, behavior, fault, smell, vibration, or partial symptom. They may not know the exact terminology used in manuals or procedures. Search still puts the burden on the user to translate the problem into the right query.
+
+Could workflow automation solve it? Automation is useful when the next step is known. But this problem was not simply about automating a task. It required understanding a situation, retrieving relevant information, synthesising it, and presenting it in a way that supported human judgment. That made AI appropriate.
+
+The task required natural language understanding, contextual retrieval, synthesis across multiple knowledge sources, source-backed guidance, and user feedback over time.
+
+The principle was: AI was not used because it was new. It was used because the problem involved ambiguity, context, and unstructured knowledge.`,
 
   solutionDesign: {
-    overview: `With the problem defined and AI justified, the design challenge was to translate that reasoning into a concrete product — one that a field technician could trust in the middle of a repair, and that an enterprise procurement team could put in front of their security and compliance reviewers.
+    overview: `The product direction was to create an AI assistant embedded directly into the maintenance workflow. The assistant would allow technicians to describe what they were seeing in plain language and receive contextual guidance based on relevant maintenance knowledge.
 
-The solution is a conversational assistant embedded directly into the work order view of the CMMS. The technician describes what they are seeing — in plain language, not search syntax — and receives a contextual, source-attributed answer drawn from the relevant asset documentation, historical repair records, and OEM fault data. The design decisions below shaped how that experience was built.`,
+The experience was designed around three high-value moments.`,
     steps: [
       {
-        title: 'Embed, don\'t redirect',
-        detail: `The Copilot surfaces inline within the active work order — not as a separate tab, a standalone app, or a chatbot widget tucked into a corner. The context the technician is already working in (asset ID, fault code, location, work order history) is automatically passed to the assistant without the technician having to re-enter it.
-
-This removed the biggest friction point in early prototypes: technicians would open a query interface, then have to re-describe the asset they were already staring at. Embedding the context as structured metadata meant the query could be as simple as "what does this fault code mean?" and the system would already know which asset and which code.`,
+        title: 'Understanding the issue',
+        detail: `Help the technician interpret symptoms, fault descriptions, or asset behaviour. The assistant reduces the cognitive load of translating what they observe into actionable understanding — without requiring the technician to know the right search terms or documentation sections in advance.`,
       },
       {
-        title: 'RAG over fine-tuning',
-        detail: `A key design fork: should the model be fine-tuned on maintenance domain knowledge, or should it retrieve facts at query time from customer-specific documents? We chose Retrieval-Augmented Generation.
-
-Fine-tuning would have encoded knowledge statically — useless the moment a customer added new equipment or updated their SOPs. RAG grounds every answer in the customer's current documentation, makes the source visible to the technician, and allows the knowledge base to be updated without retraining. For an enterprise product where data freshness and auditability matter, RAG was the only defensible choice.`,
+        title: 'Troubleshooting the issue',
+        detail: `Surface relevant guidance, prior context, and suggested checks in a structured way. Rather than leaving technicians to hunt across fragmented sources, the assistant synthesises relevant information from documentation, historical work records, and asset-specific data into a coherent, contextual response.`,
       },
       {
-        title: 'Source attribution on every response',
-        detail: `Every answer surfaces the document it was drawn from — the specific manual, the historical work order, the SOP — with enough context for the technician to verify before acting. This was non-negotiable from the first design review.
-
-In a safety-relevant context, a technician who cannot verify a recommendation will not follow it. Attribution also addresses the hallucination risk directly: if the model generates a response not grounded in the retrieved context, the absence of a credible source is a visible signal to the technician that something is off.`,
-      },
-      {
-        title: 'Feedback loop built in from day one',
-        detail: `Each response includes a lightweight feedback mechanism: a thumbs-up, a thumbs-down, and a free-text correction field. The design principle was that the product should improve from use, not just from engineering cycles.
-
-Negative feedback triggers a review queue. Corrections from experienced technicians feed directly into the retrieval quality assessment. Over time, the feedback data became one of the most valuable assets in the product — a continuously updated ground truth dataset that no synthetic benchmark could replicate.`,
+        title: 'Completing the work',
+        detail: `Help reduce documentation effort by supporting clearer work summaries for technician review. When technicians are under time pressure, documentation suffers. The assistant reduces the burden of capturing what was done, improving record quality without adding friction.`,
       },
     ],
   },
 
+  keyDecisions: [
+    {
+      decision: 'Embedded, not separate',
+      rationale: `One of the most important product decisions was to bring the assistant into the workflow instead of creating a standalone AI tool. Technicians should not have to leave the work order experience, open another app, or re-enter context the system already has.
+
+This mattered because adoption in enterprise workflows is often driven less by capability and more by convenience. If AI requires extra effort, it becomes another tool to manage. If it appears naturally in the flow of work, it becomes part of the job.`,
+    },
+    {
+      decision: 'Context-aware by default',
+      rationale: `The assistant needed to understand the maintenance context around the user's question. A technician should be able to ask a simple question in plain language without manually explaining every detail. The product experience needed to reduce repeated input and use available workflow context to make responses more relevant.
+
+This created a better user experience and made the assistant feel less like a generic chatbot and more like a maintenance-aware product capability.`,
+    },
+    {
+      decision: 'Grounded and verifiable',
+      rationale: `In operational environments, generic AI responses are not enough. The assistant needed to ground its answers in relevant source material and show users where the response came from.
+
+This was critical for trust. Technicians are accountable for the work they perform. They need to verify guidance before acting, especially in environments where safety, compliance, uptime, and cost are involved. Source attribution was not treated as a UI enhancement. It was a core trust requirement.`,
+    },
+    {
+      decision: 'Human-in-the-loop by design',
+      rationale: `The assistant was designed to support decision-making, not take control away from users. In maintenance workflows, AI should help users understand, compare, summarise, and document. But the final decision should remain with the technician or responsible human operator.
+
+That principle shaped the tone, experience, and success metrics of the product.`,
+    },
+    {
+      decision: 'Feedback built into the experience',
+      rationale: `AI products improve only if teams can learn from real-world use. The assistant needed a feedback mechanism so users could signal whether an answer was useful, incomplete, incorrect, or needed improvement.
+
+This feedback was important for two reasons: it helped improve quality over time, and it gave users a sense that the product was accountable and continuously improving. For AI products, feedback is not just a feature. It is part of the operating model.`,
+    },
+  ],
+
   risks: [
     {
-      risk: 'Hallucination in safety-critical contexts',
-      mitigation: 'The RAG architecture mitigates this structurally — every answer is grounded in a retrieved source document. But we went further: every Copilot response surfaces its source with a link, so the technician can validate before acting. The answer is never presented as authoritative; it is presented as - "here is what the documentation says."',
+      risk: 'Hallucination risk',
+      mitigation: 'The assistant needed to avoid unsupported or overly confident answers. Responses had to be tied to relevant source material and framed as decision support, not absolute instruction.',
     },
     {
-      risk: 'Trust and adoption among experienced technicians',
-      mitigation: 'Senior technicians are the hardest users to win. They have seen bad software before, and they are right to be sceptical. We ran the initial rollout with self-selected technician champions who shaped the UI language, the response format, and the feedback mechanism. When experienced technicians helped design the tool, their peers trusted it faster.',
+      risk: 'Adoption risk',
+      mitigation: 'Experienced technicians may be sceptical of AI tools, especially if they feel the system oversimplifies their work. The product needed to respect their expertise and fit into their existing workflow.',
     },
     {
-      risk: 'Data quality dependency',
-      mitigation: 'The Copilot is only as good as the data it retrieves. We built a data readiness score into the customer onboarding flow — customers with sparse or unstructured data see a clear roadmap to improving Copilot performance before going live, rather than a degraded experience that erodes trust.',
+      risk: 'Data quality risk',
+      mitigation: 'The quality of AI assistance depends heavily on the quality of the underlying maintenance knowledge. Poor documentation, inconsistent work history, or weak asset data can reduce usefulness.',
     },
     {
-      risk: 'Enterprise procurement friction on AI governance',
-      mitigation: 'Proactively built audit logs, source attribution, and an override/feedback mechanism. These became standard collateral in security reviews.',
+      risk: 'Governance risk',
+      mitigation: 'Enterprise customers need confidence that AI features are auditable, explainable, and aligned with operational controls. Trust was not something to add after launch. It was part of the product definition.',
     },
   ],
 
   metrics: {
     business: [
-      { metric: 'Retention rate — Copilot vs non-Copilot cohort',      observed: null },
-      { metric: 'Expansion revenue — AI premium tier attach rate',      observed: null },
-      { metric: 'Reduction in customer-reported downtime incidents',    observed: null },
+      { metric: 'Improved maintenance efficiency',             observed: null },
+      { metric: 'Reduced downtime-related friction',           observed: null },
+      { metric: 'Better technician productivity',              observed: null },
+      { metric: 'Stronger platform value perception',          observed: null },
+      { metric: 'Improved retention or expansion signals',     observed: null },
     ],
     product: [
-      { metric: 'Daily active Copilot usage per technician',            observed: null },
-      { metric: 'Time-to-resolution on troubleshooting work orders',    observed: '↓ 67%' },
-      { metric: 'Repeat query rate (Copilot vs calling support)',       observed: null },
+      { metric: 'Usage within troubleshooting workflows',                   observed: null },
+      { metric: 'Repeat usage by technicians',                              observed: null },
+      { metric: 'Reduction in time spent searching for information',        observed: null },
+      { metric: 'Usage during complex work orders',                         observed: null },
+      { metric: 'Qualitative feedback from users',                          observed: null },
     ],
     ai: [
-      { metric: 'Answer accuracy rate vs golden dataset',               observed: null },
-      { metric: 'User acceptance rate (thumbs up / no correction)',     observed: null },
-      { metric: 'Override rate (technician ignores recommendation)',    observed: null },
-      { metric: 'Hallucination rate flagged by reviewers',              observed: null },
-      { metric: 'Response latency p50 / p95',                          observed: null },
+      { metric: 'Answer usefulness',              observed: null },
+      { metric: 'Source relevance',               observed: null },
+      { metric: 'Correction or rejection rates',  observed: null },
+      { metric: 'User feedback signals',          observed: null },
+      { metric: 'Escalation behaviour',           observed: null },
+      { metric: 'Response latency',               observed: null },
     ],
   },
-
-  architecture: {
-    overview: `Maintenance Copilot is built on a Retrieval-Augmented Generation (RAG) architecture. The core principle: the LLM provides reasoning and language; the customer's own data provides the facts. This separation is what makes the product safe to deploy in enterprise maintenance environments where a wrong answer has real operational consequences.`,
-    layers: [
-      {
-        layer: 'Data ingestion & indexing',
-        detail: `Asset documentation — OEM manuals, SOPs, compliance records — alongside historical work orders and fault code libraries are ingested, chunked, and embedded into a vector store. We used a hybrid chunking strategy: semantic chunking for narrative technical documents, structured extraction for tabular fault code data. Embeddings are generated using a fine-tuned text embedding model and stored in pgvector on PostgreSQL, which let us leverage existing infrastructure rather than introducing a new vector database vendor — a deliberate choice that reduced operational complexity and accelerated security review.`,
-      },
-      {
-        layer: 'Retrieval layer',
-        detail: `On each technician query, the system runs a hybrid search combining dense vector similarity and sparse BM25 keyword matching. A cross-encoder re-ranking model then surfaces the most contextually relevant chunks before passing anything to the LLM. The retrieval layer is fully tenant-isolated — each customer's data is partitioned so cross-customer information leakage is architecturally impossible. This was a non-negotiable requirement for enterprise security reviews and became a standard feature of our AI governance collateral.`,
-      },
-      {
-        layer: 'LLM reasoning layer',
-        detail: `Retrieved context is composed into a structured prompt with role definition, safety instructions, mandatory source citation requirements, and the technician's natural language query. We use a GPT-4 class model via AWS Bedrock for enterprise data residency and SOC 2 compliance, with a fallback to a smaller model for latency-sensitive queries. All prompt templates are version-controlled and tested against the evaluation dataset before any change ships to production — prompt changes are treated with the same rigour as code changes.`,
-      },
-      {
-        layer: 'Evaluation & feedback layer',
-        detail: `Every response is logged with its retrieved context, generated output, and user feedback signal. We built an internal evaluation harness using LLM-as-judge scoring alongside human expert review on a sampled subset. Ragas-style metrics — faithfulness, answer relevancy, context precision — are tracked per release. The feedback loop surfaces low-confidence responses for review and directly feeds retrieval quality improvements. This is the layer that separates a product that degrades over time from one that compounds in quality.`,
-      },
-      {
-        layer: 'Product integration layer',
-        detail: `The Copilot surfaces inline within the work order view — not as a separate tab, not as a standalone tool. When a technician opens a work order, the Copilot is already pre-loaded with context: asset ID, fault code, location, and the last three work orders on that asset. The technician types or speaks a natural language description of what they're observing and gets a grounded, source-cited response. Response streaming is used to reduce perceived latency. Auto-drafted work order completion notes are generated at the end of each interaction for the technician to review and submit in one tap.`,
-      },
-    ],
-    stackImage: '/maintenance-copilot-architecture.svg',
-  },
-
-  impact: [
-    'Up to 67% reduction in troubleshooting time',
-    'Improved first-time fix rates across early-adopter accounts',
-    'Reduced unplanned downtime incidents',
-    'Became the #1 cited reason for contract renewal in post-launch QBRs',
-  ],
 
   learned: [
     {
       heading: 'Trust is the product.',
-      body: `Every technical decision — RAG architecture, evaluation scoring, human-in-the-loop design — was ultimately a trust decision. Customers weren't just asking "does it work?" They were asking "can I bet my job on this?" Framing the product around trust, and building the evidence to back it up, was more important than any individual feature.`,
+      body: `In enterprise AI, the main question is not just "Can the model answer?" The real question is: Can the user trust this answer enough to use it in their workflow?
+
+Every product decision — grounding, attribution, feedback, human oversight, and measurement — contributed to trust.`,
     },
     {
-      heading: 'Distribution beats invention.',
-      body: `Embedding Copilot into the existing work order workflow — rather than launching it as a separate product — was the highest-leverage call we made. Technicians didn't need to change their habits; the AI came to them. Adoption rates for embedded features ran 3–4× higher than standalone tools in our cohort data.`,
+      heading: 'Workflow fit matters more than novelty.',
+      body: `AI adoption improves when the capability appears exactly where users already work. A separate AI interface may be impressive in a demo, but embedded assistance is more likely to become a habit.`,
     },
     {
-      heading: 'A sharp problem definition is a competitive moat.',
-      body: `Competitors entered this space with general-purpose chatbots. We won early deals by articulating a narrower, more credible problem: "troubleshooting time in maintenance workflows," not "AI for CMMS." Specific problem definitions make discovery conversations shorter, positioning clearer, and success metrics obvious. Vague AI bets lose. Specific ones compound.`,
+      heading: 'Narrow use cases create stronger products.',
+      body: `"AI for asset maintenance" is too broad. "Help technicians troubleshoot faster inside the work order flow" is specific, measurable, and easier to adopt. The narrower framing made the product easier to design, explain, and evaluate.`,
     },
     {
-      heading: 'Data quality is the unlock — and the ceiling.',
-      body: `The Copilot is only as good as the data it retrieves. Customers with well-structured asset hierarchies and rich work order histories saw dramatically better results. This shaped the roadmap: data-quality tooling became a prerequisite feature, and it turned out to be an unexpected customer success lever — improving data to feed the AI improved operational outcomes independently of the AI itself.`,
+      heading: 'Data quality is a product issue.',
+      body: `AI performance depends on the quality of the knowledge it can access. That means data readiness is not just a technical or implementation concern. It affects onboarding, adoption, customer success, and long-term product value.`,
     },
     {
-      heading: 'Evaluation is a product discipline, not an engineering afterthought.',
-      body: `PMs who ship AI features without a measurement layer are shipping blind. Building the golden dataset, defining the eval metrics, and treating prompt changes with the rigour of code changes — these are product decisions, not engineering ones. The teams that get this right build AI products that improve over time. The ones that don't build AI products that erode trust after the demo.`,
+      heading: 'Evaluation is a PM responsibility.',
+      body: `AI products need continuous measurement. Product managers need to understand how quality is assessed, how feedback loops work, and how changes affect user trust. Shipping AI without evaluation is like shipping a product without analytics.`,
     },
   ],
 
   responsibilities: [
-    'Responsibilities spanned AI strategy, customer discovery, roadmap prioritisation, monetisation model design, and cross-functional leadership across engineering, data science, design, and go-to-market.',
+    `My role covered product strategy, discovery, prioritisation, experience definition, and cross-functional execution. I was involved in identifying the business opportunity, selecting the primary user and problem area, validating why AI was appropriate, defining the product direction, shaping the AI experience around trust and workflow fit, aligning stakeholders across product, engineering, data science, design, and go-to-market, defining success metrics, and translating technical AI capabilities into a business value story.
+
+The work required balancing three perspectives: user value (would this actually help technicians in the field?), business value (would this improve customer outcomes and platform stickiness?), and AI feasibility and trust (could the system provide useful guidance in a safe, measurable, and explainable way?). That balance was the core product challenge.`,
   ],
 
-  technologies: ['Generative AI', 'RAG', 'Prompt Engineering', 'LLM Evaluation', 'pgvector', 'AWS Bedrock', 'LangChain', 'Langfuse'],
+  technologies: [
+    'AI Product Strategy',
+    'Enterprise SaaS',
+    'Maintenance & Asset Lifecycle',
+    'User Discovery',
+    'Workflow-Integrated AI',
+    'Human-in-the-Loop Design',
+    'Trust & Adoption Design',
+    'AI Evaluation',
+    'Business Outcome Framing',
+    'Cross-Functional Leadership',
+  ],
 };

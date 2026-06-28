@@ -8,7 +8,9 @@
       "Bash(curl -s http://localhost:4322/ai/dynamic-targeting)",
       "Bash(npm list *)",
       "Bash(node -e \"const s=require\\('./node_modules/@astrojs/sitemap/dist/index.js'\\); console.log\\('ok'\\)\")",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(npx astro *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4322/ai/maintenance-copilot/)"
     ],
     "additionalDirectories": [
       "\\mnt\\c\\Users\\z0052tba\\Desktop"
