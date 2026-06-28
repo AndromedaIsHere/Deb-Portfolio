@@ -11,7 +11,9 @@
       "Bash(npm run *)",
       "Bash(npx astro *)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4322/ai/maintenance-copilot/)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4322/ai/dynamic-targeting/)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4322/ai/dynamic-targeting/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4322/ai/next-best-action/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4322/)"
     ],
     "additionalDirectories": [
       "\\mnt\\c\\Users\\z0052tba\\Desktop"
