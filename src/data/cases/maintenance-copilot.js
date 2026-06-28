@@ -3,7 +3,7 @@ export const maintenanceCopilot = {
   title: 'Maintenance Copilot',
   domain: 'Enterprise Asset Management',
 
-  metric: 'Reduced troubleshooting friction in the field',
+  metric: 'Conversational AI assistant to help technicians troubleshoot faster and work with more confidence',
   problem: 'Technicians lacked context at the moment of execution — information existed but was fragmented, inaccessible, and never available in the right form when needed.',
   solution: 'Designing an AI assistant to help maintenance teams troubleshoot faster, work with more confidence, and reduce information friction in the field.',
   metaDescription: 'Maintenance Copilot — AI product case study by Debajyoti Das. How an AI assistant embedded in maintenance workflows reduced troubleshooting friction and helped technicians resolve issues faster, with more confidence.',

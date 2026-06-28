@@ -3,7 +3,7 @@ export const nextBestAction = {
   title: 'Omni-Channel Next Best Action',
   domain: 'Life Sciences',
 
-  metric: 'AI-powered engagement recommendation system for life sciences commercial teams',
+  metric: 'Omni-Channel engagement recommendation for life sciences commercial teams',
   problem: 'Commercial engagement was fragmented across teams and channels — each acting with partial context, resulting in a disjointed HCP experience.',
   solution: 'AI-powered recommendation system that helps pharma commercial teams coordinate field, digital, and marketing engagement by recommending the next best action for each HCP.',
   metaDescription: 'Omni-Channel Next Best Action — AI product case study by Debajyoti Das. An AI-powered engagement recommendation system that helps life sciences commercial teams recommend the right action, through the right channel, at the right time for each HCP.',

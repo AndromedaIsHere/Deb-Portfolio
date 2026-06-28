@@ -3,7 +3,7 @@ export const dynamicTargeting = {
   title: 'Dynamic Targeting',
   domain: 'Life Sciences',
 
-  metric: '4–10% incremental lift in brand sales · 50% greater field effectiveness · 10+ global organisations',
+  metric: 'A Decision intelligence platform that helps life sciences commercial field teams act on the right opportunities at the right time',
   problem: 'Commercial teams relied on static, quarterly HCP segmentation — missing high-potential prescribers and misdirecting rep effort.',
   solution: 'AI-powered HCP prioritization platform for life sciences commercial teams',
   metaDescription: 'Dynamic Targeting — AI product case study by Debajyoti Das. A model ensemble platform (LSTM, behavioural shift, patient prediction) that delivered 4–10% incremental brand sales lift across 10+ global life sciences organisations.',

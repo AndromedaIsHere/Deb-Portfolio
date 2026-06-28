@@ -634,3 +634,108 @@
 19:59:45 [200] / 12ms
 19:59:50 [200] / 5ms
 20:00:02 [200] / 9ms
+20:03:00 [watch] src/data/cases/maintenance-copilot.js
+20:03:01 [200] / 12ms
+20:03:10 [watch] src/data/cases/dynamic-targeting.js
+20:03:10 [200] / 6ms
+20:03:20 [watch] src/data/cases/kapture.js
+20:03:20 [200] / 13ms
+20:09:28 [200] /ai/maintenance-copilot/ 16ms
+20:09:29 [200] / 4ms
+20:12:01 [watch] src/data/cases/kapture.js
+20:12:02 [200] / 10ms
+20:12:02 [200] / 4ms
+20:28:09 [200] /ai/kapture/ 9ms
+20:40:01 [200] /ai/kapture 11ms
+20:40:55 [200] / 9ms
+20:42:38 [watch] src/styles/global.css
+20:42:40 [200] / 13ms
+20:42:52 [200] / 11ms
+21:28:31 [200] / 8ms
+22:26:08 [200] / 7ms
+22:27:14 [200] /ai/maintenance-copilot 10ms
+22:27:22 [200] / 3ms
+22:29:25 [watch] src/data/cases/dynamic-targeting.js
+22:29:25 [watch] src/data/cases/dynamic-targeting.js
+22:29:25 [watch] src/data/cases/dynamic-targeting.js
+22:29:26 [watch] src/data/cases/dynamic-targeting.js
+22:29:27 [200] / 6ms
+22:30:08 [watch] src/data/cases/maintenance-copilot.js
+22:30:08 [watch] src/data/cases/maintenance-copilot.js
+22:30:08 [watch] src/data/cases/maintenance-copilot.js
+22:30:08 [watch] src/data/cases/maintenance-copilot.js
+22:30:09 [200] / 6ms
+22:30:09 [watch] src/data/cases/maintenance-copilot.js
+22:30:09 [watch] src/data/cases/maintenance-copilot.js
+22:30:09 [watch] src/data/cases/maintenance-copilot.js
+22:30:10 [200] / 2ms
+22:30:26 [watch] src/data/cases/maintenance-copilot.js
+22:30:26 [watch] src/data/cases/maintenance-copilot.js
+22:30:26 [watch] src/data/cases/maintenance-copilot.js
+22:30:26 [watch] src/data/cases/maintenance-copilot.js
+22:30:27 [watch] src/data/cases/maintenance-copilot.js
+22:30:27 [200] / 6ms
+22:30:27 [watch] src/data/cases/maintenance-copilot.js
+22:30:27 [watch] src/data/cases/maintenance-copilot.js
+22:30:27 [watch] src/data/cases/maintenance-copilot.js
+22:30:27 [watch] src/data/cases/maintenance-copilot.js
+22:30:28 [200] / 2ms
+22:30:39 [watch] src/data/cases/kapture.js
+22:30:39 [watch] src/data/cases/kapture.js
+22:30:39 [watch] src/data/cases/kapture.js
+22:30:40 [watch] src/data/cases/kapture.js
+22:30:40 [watch] src/data/cases/kapture.js
+22:30:40 [watch] src/data/cases/kapture.js
+22:30:40 [watch] src/data/cases/kapture.js
+22:30:40 [watch] src/data/cases/kapture.js
+22:30:41 [200] / 5ms
+22:31:12 [watch] src/data/cases/next-best-action.js
+22:31:12 [watch] src/data/cases/next-best-action.js
+22:31:12 [watch] src/data/cases/next-best-action.js
+22:31:12 [watch] src/data/cases/next-best-action.js
+22:31:13 [watch] src/data/cases/next-best-action.js
+22:31:13 [watch] src/data/cases/next-best-action.js
+22:31:13 [watch] src/data/cases/next-best-action.js
+22:31:13 [watch] src/data/cases/next-best-action.js
+22:31:14 [200] / 5ms
+22:31:30 [watch] src/data/cases/next-best-action.js
+22:31:30 [200] / 5ms
+22:31:30 [watch] src/data/cases/next-best-action.js
+22:31:30 [watch] src/data/cases/next-best-action.js
+22:31:30 [watch] src/data/cases/next-best-action.js
+22:31:30 [watch] src/data/cases/next-best-action.js
+22:31:31 [watch] src/data/cases/next-best-action.js
+22:31:31 [200] / 2ms
+22:31:31 [watch] src/data/cases/next-best-action.js
+22:31:31 [watch] src/data/cases/next-best-action.js
+22:31:31 [watch] src/data/cases/next-best-action.js
+22:31:31 [watch] src/data/cases/next-best-action.js
+22:31:32 [watch] src/data/cases/next-best-action.js
+22:31:32 [200] / 2ms
+22:31:32 [watch] src/data/cases/next-best-action.js
+22:31:32 [watch] src/data/cases/next-best-action.js
+22:31:32 [watch] src/data/cases/next-best-action.js
+22:31:33 [200] / 2ms
+22:31:33 [watch] src/data/cases/next-best-action.js
+22:31:33 [watch] src/data/cases/next-best-action.js
+22:31:33 [watch] src/data/cases/next-best-action.js
+22:31:33 [watch] src/data/cases/next-best-action.js
+22:31:34 [watch] src/data/cases/next-best-action.js
+22:31:34 [200] / 3ms
+22:31:34 [watch] src/data/cases/next-best-action.js
+22:31:34 [watch] src/data/cases/next-best-action.js
+22:31:34 [watch] src/data/cases/next-best-action.js
+22:31:34 [watch] src/data/cases/next-best-action.js
+22:31:35 [watch] src/data/cases/next-best-action.js
+22:31:35 [200] / 2ms
+22:31:35 [watch] src/data/cases/next-best-action.js
+22:32:04 [200] /ai/kapture 8ms
+22:32:09 [200] / 4ms
+22:32:10 [200] /ai/next-best-action 4ms
+22:32:13 [200] / 3ms
+22:32:14 [200] /ai/dynamic-targeting 6ms
+22:32:16 [200] / 3ms
+22:32:17 [200] /ai/maintenance-copilot 6ms
+22:32:19 [200] / 2ms
+22:32:23 [200] / 3ms
+22:32:26 [200] / 6ms

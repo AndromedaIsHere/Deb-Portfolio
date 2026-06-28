@@ -469,11 +469,10 @@ a:hover { text-decoration: underline; }
 }
 
 .notes-list-item {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  gap: .75rem 1rem;
+  gap: .75rem 1.5rem;
   padding: .75rem 0;
   border-bottom: 1px dotted var(--color-border);
 }
@@ -481,7 +480,6 @@ a:hover { text-decoration: underline; }
 .notes-list-item a {
   color: inherit;
   text-decoration: none;
-  flex: 1 1 auto;
   min-width: 0;
 }
 .notes-list-item a:hover { color: var(--color-accent); }
